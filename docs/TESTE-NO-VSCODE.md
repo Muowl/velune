@@ -23,4 +23,4 @@ O resultado detalhado está em `validation.json`, gerado por `npm test`. Ele inc
 
 ## O que falta antes de publicar
 
-Avaliação dentro do VS Code e do Cursor, ajustes a partir do uso, revisão do símbolo, confirmação do identificador de publicação, escolha da licença de reutilização e preparação das imagens de apresentação. O código está em https://github.com/Muowl/velune; o protótipo não foi publicado em nenhum marketplace.
+Avaliação dentro do VS Code e do Cursor, ajustes a partir do uso, confirmação do identificador de publicação, escolha da licença de reutilização e preparação das imagens de apresentação. O código está em https://github.com/Muowl/velune; o protótipo não foi publicado em nenhum marketplace.

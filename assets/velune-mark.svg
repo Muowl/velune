@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1254" height="1254" viewBox="0 0 1254 1254" role="img" aria-labelledby="title desc">
+  <title id="title">Velune</title>
+  <desc id="desc">Guarda-chuva inclinado com copa sólida lavanda e cabo curvo carmesim.</desc>
+  <g fill="#C99AF7">
+    <path d="M270 336C404 286 561 285 697 321C764 350 808 334 842 264C818 330 821 357 852 393C946 504 1000 640 1020 797C970 705 922 686 870 733C867 641 771 578 659 639C654 541 568 457 441 518C472 428 393 340 270 336Z"/>
+    <path d="M632 590L649 600L535 802L508 787Z"/>
+  </g>
+  <path fill="#E14C6F" d="M500 795L527 811L491 870C476 894 476 915 490 925C509 938 537 930 553 904C558 895 567 889 579 895C591 900 593 912 585 925C553 984 503 985 464 960C436 942 439 905 451 881Z"/>
+</svg>

@@ -1,6 +1,6 @@
 # C#, C++ e Cursor
 
-O Velune 0.1.1 utiliza o formato de tema do VS Code, com regras TextMate e coloração semântica. A paleta central continua independente do editor. Não é necessário manter uma variante diferente só para o Cursor.
+O Velune 0.1.2 utiliza o formato de tema do VS Code, com regras TextMate e coloração semântica. A paleta central continua independente do editor. Não é necessário manter uma variante diferente só para o Cursor.
 
 ## Resultado da validação
 
@@ -26,7 +26,7 @@ A gramática não resolve todos os símbolos: referências a enum, macros ou con
 ## Instalar e avaliar no Cursor
 
 1. Baixe o VSIX do projeto, extraia o ZIP do artefato e abra o Cursor em modo **IDE**. Se estiver na janela de agentes, execute **Open IDE** pela paleta.
-2. Execute **Extensions: Install from VSIX…**, selecione `velune-0.1.1.vsix` e depois escolha **Velune Dark** em **Preferences: Color Theme**.
+2. Execute **Extensions: Install from VSIX…**, selecione `velune-0.1.2.vsix` e depois escolha **Velune Dark** em **Preferences: Color Theme**.
 3. Use uma extensão de linguagem disponível e compatível com a sua instalação do Cursor. O tema não instala compiladores, IntelliSense ou servidores de linguagem. Os fornecedores usados nos contratos de teste não representam uma garantia de disponibilidade no catálogo do Cursor.
 4. Abra `theme.cs` e `theme.cpp` de `tests/fixtures` e depois um projeto real. Aguarde a análise da extensão de linguagem. Para C++, use a configuração de compilação do seu projeto.
 5. Compare temporariamente `editor.semanticHighlighting.enabled` em `false` e `true` nas configurações do workspace. O valor `configuredByTheme` também permite a semântica habilitada pelo Velune. Restaure sua preferência ao concluir.

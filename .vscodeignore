@@ -12,3 +12,4 @@ package-lock.json
 .node-version
 .gitattributes
 **/*.vsix
+assets/*.svg

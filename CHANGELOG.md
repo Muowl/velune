@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.2 — 2026-10-23
+
+- Ícone aprovado: guarda-chuva inclinado com copa sólida lavanda e cabo carmesim.
+- Símbolo em SVG com fundo transparente, ícone com fundo do tema e PNG de 256 pixels integrado à extensão.
+- Geração reproduzível do ícone e exportações PNG de 1024 pixels para outros usos.
+- README e artefatos do CI atualizados com a identidade visual.
+
 ## 0.1.1 — 2026-10-23
 
 - Validação de C# e C++ com exemplos, 56 verificações específicas de sintaxe e contratos semânticos baseados nos fornecedores C#, C/C++ e clangd.

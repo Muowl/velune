@@ -32,7 +32,7 @@ jobs:
       - name: Build, validate and package
         run: npm run package
       - name: Check generated theme is up to date
-        run: git diff --exit-code -- themes/ core/resolved-tokens.json docs/validation.json docs/token-preview.html
+        run: git diff --exit-code -- themes/ core/resolved-tokens.json docs/validation.json docs/token-preview.html assets/icon.png assets/velune-icon.svg
       - name: Upload VSIX and validation results
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
@@ -41,5 +41,9 @@ jobs:
             dist/*.vsix
             dist/token-preview.html
             docs/validation.json
+            assets/velune-mark.svg
+            assets/velune-icon.svg
+            dist/velune-icon-1024.png
+            dist/velune-mark-1024.png
           if-no-files-found: error
           retention-days: 30

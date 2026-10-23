@@ -1,14 +1,16 @@
+<img src="assets/icon.png" width="96" height="96" alt="Velune: guarda-chuva lavanda com cabo carmesim">
+
 # Velune
 
 Tema dark inspirado na paleta de Evernight, de Honkai: Star Rail. Combina fundo quase preto com violeta discreto, sintaxe em lavanda, rosa e azul, e detalhes carmesim na interface.
 
-Versão 0.1.1: protótipo para VS Code e editores compatíveis, com roteiro de avaliação no Cursor. Nome e símbolo ainda podem evoluir. A identidade local da extensão é `muowl.velune`; esse identificador não confirma a existência ou a disponibilidade de um publisher no Marketplace.
+Versão 0.1.2: protótipo para VS Code e editores compatíveis, com roteiro de avaliação no Cursor. A identidade local da extensão é `muowl.velune`; esse identificador não confirma a existência ou a disponibilidade de um publisher no Marketplace.
 
 Repositório: [Muowl/velune](https://github.com/Muowl/velune).
 
 ## Instalação
 
-1. Obtenha `velune-0.1.1.vsix` compilando o projeto ou baixando o artefato de uma execução bem-sucedida em [Actions](https://github.com/Muowl/velune/actions/workflows/validate.yml). O download de artefatos exige login no GitHub; extraia o ZIP antes de instalar.
+1. Obtenha `velune-0.1.2.vsix` compilando o projeto ou baixando o artefato de uma execução bem-sucedida em [Actions](https://github.com/Muowl/velune/actions/workflows/validate.yml). O download de artefatos exige login no GitHub; extraia o ZIP antes de instalar.
 2. No VS Code ou Cursor (modo IDE), abra Extensões (`Ctrl+Shift+X`).
 3. No menu `…`, escolha **Install from VSIX… / Instalar do VSIX…** e selecione o arquivo.
 4. Abra a paleta de comandos (`Ctrl+Shift+P`), execute **Preferences: Color Theme / Preferências: Tema de Cores** e escolha **Velune Dark**.
@@ -16,12 +18,14 @@ Repositório: [Muowl/velune](https://github.com/Muowl/velune).
 Pelo terminal, com o comando `code` disponível:
 
 ```sh
-code --install-extension velune-0.1.1.vsix
+code --install-extension velune-0.1.2.vsix
 ```
 
 No Cursor, também é possível executar `Extensions: Install from VSIX…` pela paleta de comandos. Consulte o [guia de C#, C++ e Cursor](docs/COMPATIBILIDADE.md) para configuração e avaliação.
 
 O tema mantém a fonte, o tamanho do texto, o conjunto de ícones e as demais configurações pessoais. Ele contribui somente cores e estilos; não possui código de ativação, telemetria ou dependências em execução.
+
+O ícone combina um guarda-chuva inclinado de copa sólida lavanda com cabo carmesim sobre o fundo do tema. O [símbolo vetorial](assets/velune-mark.svg) tem fundo transparente; o [ícone completo](assets/velune-icon.svg) inclui o fundo `#141119`. A extensão utiliza a versão PNG de 256 × 256 pixels.
 
 ## Paleta
 
@@ -61,7 +65,9 @@ npm test
 npm run package
 ```
 
-O VSIX será criado em `dist/velune-0.1.1.vsix`. Os testes também geram `dist/token-preview.html` e sua cópia versionada `docs/token-preview.html`, uma prévia da sintaxe com as gramáticas reais, e `docs/validation.json`, com os resultados numéricos.
+`npm run build:icon` regenera o ícone a partir de `assets/velune-mark.svg`. O build completo também gera as exportações PNG de 1024 pixels em `dist/velune-icon-1024.png` e `dist/velune-mark-1024.png`, esta última com transparência. A ferramenta de renderização fica restrita ao desenvolvimento.
+
+O VSIX será criado em `dist/velune-0.1.2.vsix`. Os testes também geram `dist/token-preview.html` e sua cópia versionada `docs/token-preview.html`, uma prévia da sintaxe com as gramáticas reais, e `docs/validation.json`, com os resultados numéricos.
 
 O workflow **Validate Velune** executa o empacotamento e os testes em pushes para `main` e em pull requests. Ele verifica se os arquivos gerados estão atualizados e disponibiliza o VSIX, a prévia e o relatório como artefatos por 30 dias. Não há publicação automática em marketplaces.
 
@@ -69,6 +75,7 @@ Para visualizar durante o desenvolvimento, abra esta pasta no VS Code, instale a
 
 ## Estrutura
 
+- `assets/velune-mark.svg`: desenho vetorial original; `icon.png` e `velune-icon.svg` são gerados.
 - `core/palette.json`: valores das cores.
 - `core/roles.json`: significados independentes de plataforma.
 - `core/resolved-tokens.json`: papéis resolvidos, gerados pelo build.
