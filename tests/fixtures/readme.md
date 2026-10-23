@@ -1,11 +1,11 @@
 # Velune
 
-Tema **dark** inspirado em Evernight, com *ênfase de Markdown* preservada.
+A **dark** theme inspired by Evernight, with *Markdown emphasis* preserved.
 
-- Código inline: `theme.name`.
-- [Referência do VS Code](https://code.visualstudio.com/api/references/theme-color).
+- Inline code: `theme.name`.
+- [VS Code reference](https://code.visualstudio.com/api/references/theme-color).
 
-> Comentários de código permanecem sem itálico; a marcação de prosa conserva seu significado.
+> Code comments stay upright; prose markup keeps its meaning.
 
 ```ts
 const name = "Velune";

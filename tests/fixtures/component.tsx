@@ -14,7 +14,7 @@ export function ThemeCard({ name, onSelect }: ThemeCardProps) {
       onClick={() => { setActive(true); onSelect(name); }}
     >
       <span>{name}</span>
-      {active ? "Selecionado" : "Selecionar"}
+      {active ? "Selected" : "Select"}
     </button>
   );
 }

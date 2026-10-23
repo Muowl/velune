@@ -1,101 +1,69 @@
-<img src="assets/icon.png" width="96" height="96" alt="Velune: guarda-chuva lavanda com cabo carmesim">
+<img src="assets/icon.png" width="80" height="80" alt="Velune umbrella icon">
 
 # Velune
 
-Tema dark inspirado na paleta de Evernight, de Honkai: Star Rail. Combina fundo quase preto com violeta discreto, sintaxe em lavanda, rosa e azul, e detalhes carmesim na interface.
+A dark theme for VS Code, inspired by Evernight from Honkai: Star Rail. Near-black backgrounds, lavender keywords, soft blue functions and restrained crimson accents.
 
-Versão 0.1.3: versão inicial para VS Code e editores compatíveis, com roteiro de avaliação no Cursor. A identidade local da extensão é `muowl.velune`; esse identificador não confirma a existência ou a disponibilidade de um publisher no Marketplace.
+![TypeScript syntax highlighted with Velune Dark](assets/preview.png)
 
-Repositório: [Muowl/velune](https://github.com/Muowl/velune).
+TextMate preview generated from the theme. Fonts and semantic highlighting may change how code looks in your editor.
 
-## Instalação
+## Install
 
-1. Obtenha `velune-0.1.3.vsix` compilando o projeto ou baixando o artefato de uma execução bem-sucedida em [Actions](https://github.com/Muowl/velune/actions/workflows/validate.yml). O download de artefatos exige login no GitHub; extraia o ZIP antes de instalar.
-2. No VS Code ou Cursor (modo IDE), abra Extensões (`Ctrl+Shift+X`).
-3. No menu `…`, escolha **Install from VSIX… / Instalar do VSIX…** e selecione o arquivo.
-4. Abra a paleta de comandos (`Ctrl+Shift+P`), execute **Preferences: Color Theme / Preferências: Tema de Cores** e escolha **Velune Dark**.
+1. Open a successful [Validate Velune workflow run](https://github.com/Muowl/velune/actions/workflows/validate.yml) and download its artifact. GitHub requires sign-in to download artifacts. Extract the ZIP to find the `.vsix` file.
+2. In VS Code, open the Extensions view, select **… → [Install from VSIX…](https://code.visualstudio.com/docs/configure/extensions/extension-marketplace#install-from-a-vsix)** and choose the file.
+3. Open the Command Palette, run **Preferences: Color Theme** and select **Velune Dark**.
 
-Pelo terminal, com o comando `code` disponível:
+You can also install from the terminal:
 
 ```sh
 code --install-extension velune-0.1.3.vsix
 ```
 
-No Cursor, também é possível executar `Extensions: Install from VSIX…` pela paleta de comandos. Consulte o [guia de C#, C++ e Cursor](docs/COMPATIBILIDADE.md) para configuração e avaliação.
+For Cursor, use **Extensions: Install from VSIX…** in the Command Palette and select the same theme. These controls are in Cursor's [IDE view](https://cursor.com/help/customization/themes).
 
-O tema mantém a fonte, o tamanho do texto, o conjunto de ícones e as demais configurações pessoais. Ele contribui somente cores e estilos; não possui código de ativação, telemetria ou dependências em execução.
+To build the VSIX yourself, see [Development](#development).
 
-O ícone combina um guarda-chuva inclinado de copa sólida lavanda com cabo carmesim sobre o fundo do tema. O [símbolo vetorial](assets/velune-mark.svg) tem fundo transparente; o [ícone completo](assets/velune-icon.svg) inclui o fundo `#141119`. A extensão utiliza a versão PNG de 256 × 256 pixels.
+## Palette
 
-## Paleta
-
-| Papel | Cor |
+| Role | Color |
 | --- | --- |
-| Editor | `#141119` |
-| Painéis | `#1B1723` |
-| Texto | `#E6DFEC` |
-| Comentários | `#96889F` |
-| Palavras-chave | `#C99AF7` |
-| Funções | `#AFBEF1` |
-| Tipos | `#E2B1D6` |
+| Editor background | `#141119` |
+| Panels | `#1B1723` |
+| Text | `#E6DFEC` |
+| Comments | `#96889F` |
+| Keywords | `#C99AF7` |
+| Functions | `#AFBEF1` |
+| Types | `#E2B1D6` |
 | Strings | `#B5CBAA` |
-| Números e literais | `#E2C291` |
-| Destaque carmesim | `#E14C6F` |
+| Numbers and literals | `#E2C291` |
+| Crimson accent | `#E14C6F` |
 
-Variáveis comuns, parâmetros e propriedades permanecem neutros, inclusive variáveis `const`. Comentários e código não recebem itálico ou negrito automáticos. Markdown preserva o estilo de ênfase indicado no texto.
+Variables, parameters and properties stay neutral. Code and comments use regular text, while Markdown keeps explicit emphasis. The theme also includes Git diff colors, diagnostics and all 16 ANSI terminal colors.
 
-Erros usam um vermelho mais claro que o destaque da marca. Avisos, informações e mudanças do Git têm cores próprias. A barra de status permanece escura. O tema também define as 16 cores ANSI do terminal.
+Velune contributes colors and styles only, with no activation code or runtime dependencies. Your font, font size and file icon theme stay as you configured them.
 
-## Cobertura e limites
+## Language support
 
-Os testes usam gramáticas TextMate reais de TypeScript, JavaScript, TSX, HTML, CSS, JSON, Python, Markdown, C#, C++, Rust e Java. Há 142 verificações específicas de símbolos nessas quatro últimas linguagens, além dos testes gerais. As regras semânticas cobrem tokens padrão e classificações próprias dos fornecedores. Os contratos estáticos usam declarações dos projetos C#, C/C++, clangd, rust-analyzer e Java da Red Hat; não executam esses servidores de linguagem.
+Grammar tests cover TypeScript, JavaScript, TSX, HTML, CSS, JSON, Python, Markdown, C#, C++, Rust and Java. Semantic token rules include C#, C/C++, clangd, rust-analyzer and Red Hat Java classifications.
 
-A extensão foi empacotada e validada automaticamente, mas ainda precisa de uma sessão de uso no VS Code e no Cursor. A compatibilidade com o Cursor se baseia no formato de extensão de tema e nas interfaces comuns do editor; a interface própria de IA ainda requer avaliação no aplicativo. Os testes de gramática usam Shiki com versão fixa; extensões instaladas podem oferecer gramáticas ou tokens semânticos diferentes. A aparência também depende da fonte, do monitor e de personalizações do usuário.
+The result depends on your language extension and its token classifications. Live VS Code and Cursor sessions are not covered by the automated checks; Cursor-specific AI surfaces still need visual review. See the [development guide](docs/development.md#validation) for test coverage and limitations.
 
-As verificações de contraste cobrem texto e sintaxe no editor, seleção, linha atual, busca, referências e fundos de diferenças do Git, além de pares da interface e do terminal. Decorações sobrepostas e estados adicionais exigem revisão visual. O preto ANSI é uma cor de base deliberadamente escura e não satisfaz o limiar adotado para texto normal. Esses testes não constituem uma certificação de acessibilidade.
+## Development
 
-O [guia de publicação](docs/PUBLICACAO.md) registra o pacote, os comandos de envio e a avaliação manual pendente.
-
-## Desenvolvimento
-
-Requisitos: Node.js 22 ou superior e npm. O ambiente de criação usou Node.js 24.19.0. As dependências de desenvolvimento estão fixadas em `package-lock.json`.
+Requires Node.js 22 or later and npm.
 
 ```sh
 npm ci --ignore-scripts
-npm run build
-npm test
 npm run package
 ```
 
-`npm run build:icon` regenera o ícone a partir de `assets/velune-mark.svg`. O build completo também gera as exportações PNG de 1024 pixels em `dist/velune-icon-1024.png` e `dist/velune-mark-1024.png`, esta última com transparência. A ferramenta de renderização fica restrita ao desenvolvimento.
+This builds the theme and icon, runs validation and creates `dist/velune-0.1.3.vsix`.
 
-O VSIX será criado em `dist/velune-0.1.3.vsix`. Os testes também geram `dist/token-preview.html` e sua cópia versionada `docs/token-preview.html`, uma prévia da sintaxe com as gramáticas reais, e `docs/validation.json`, com os resultados numéricos.
+See the [development guide](docs/development.md) for the source layout, editor preview and validation workflow. Changes between versions are listed in the [changelog](CHANGELOG.md).
 
-O workflow **Validate Velune** executa o empacotamento e os testes em pushes para `main` e em pull requests. Ele verifica se os arquivos gerados estão atualizados e disponibiliza o VSIX, a prévia e o relatório como artefatos por 30 dias. Não há publicação automática em marketplaces.
+For color or highlighting issues, [open an issue](https://github.com/Muowl/velune/issues) with your editor version, language extension, a small code sample and a screenshot.
 
-Para visualizar durante o desenvolvimento, abra esta pasta no VS Code, instale as dependências e pressione `F5`. A configuração **Preview Velune** abre uma janela de desenvolvimento com os exemplos de código. Nessa janela, selecione **Velune Dark**.
+## License
 
-## Estrutura
-
-- `assets/velune-mark.svg`: desenho vetorial original; `icon.png` e `velune-icon.svg` são gerados.
-- `core/palette.json`: valores das cores.
-- `core/roles.json`: significados independentes de plataforma.
-- `core/resolved-tokens.json`: papéis resolvidos, gerados pelo build.
-- `scripts/build.mjs`: adaptação para as configurações do VS Code.
-- `themes/velune-dark-color-theme.json`: resultado gerado; não editar manualmente.
-- `tests/fixtures/`: código para avaliação.
-- `scripts/validate.mjs`: contraste, consistência, gramáticas e integridade do tema.
-
-Novas plataformas deverão consumir os papéis centrais por adaptadores próprios. O adaptador implementado gera o formato de tema do VS Code, reutilizado pelo Cursor. Outros formatos de tema precisarão de adaptadores próprios.
-
-## Referências
-
-- https://cursor.com/help/customization/themes
-- https://cursor.com/help/customization/extensions
-
-- https://code.visualstudio.com/api/extension-guides/color-theme
-- https://code.visualstudio.com/api/language-extensions/semantic-highlight-guide
-- https://code.visualstudio.com/api/references/theme-color
-- https://code.visualstudio.com/api/working-with-extensions/publishing-extension
-
-Projeto independente inspirado nas referências visuais fornecidas. As artes da personagem não são distribuídas no pacote. O projeto é distribuído sob a [licença MIT](LICENSE).
+[MIT](LICENSE).

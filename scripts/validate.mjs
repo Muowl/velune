@@ -106,7 +106,7 @@ tokenAt('json', '"name"', 2, palette.syntax.type);
 tokenAt('json', '"Velune"', 2, palette.syntax.string);
 tokenAt('python', 'def alpha', 4, palette.syntax.function);
 tokenAt('python', 'class Theme', 6, palette.syntax.type);
-tokenAt('python', '# Comentários', 4, palette.text.comment);
+tokenAt('python', '# Comments', 4, palette.text.comment);
 // Real grammar regressions: specific symbols, not just the number of colors.
 const languageCases = JSON.parse(await readFile(path.join(root, 'tests/language-cases.json'), 'utf8'));
 const paletteColor = colorRole => colorRole.split('.').reduce((object, key) => object[key], palette);
@@ -168,7 +168,7 @@ await mkdir(path.join(root, 'dist'), { recursive: true });
 await mkdir(path.join(root, 'docs'), { recursive: true });
 const report = { version: manifest.version, checks: checks.length, languages: fixtures.map(([lang]) => lang), contrasts, semanticContracts: { kind: 'static declarations, not live LSP output', providers: providers.map(provider => provider.id), cases: Object.values(providerCases).reduce((sum, cases) => sum + Object.keys(cases).length, 0) }, limits: ['No live VS Code, Cursor session or language-server integration was run.', 'TextMate grammars are supplied by the pinned Shiki dependency; installed VS Code extensions may use different grammars.', 'Overlapping selection, search and diff decorations still need visual evaluation in the editor.', 'ANSI black is deliberately exempt from the normal-text contrast threshold.'] };
 await writeFile(path.join(root, 'docs/validation.json'), JSON.stringify(report, null, 2) + '\n');
-const preview = `<!doctype html><html lang="pt-BR"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Velune — gramáticas reais</title><style>body{margin:0;background:${palette.background.editor};color:${palette.text.primary};font:15px/1.6 system-ui}main{max-width:1040px;margin:auto;padding:24px}h1,h2{font-weight:500}h2{font-size:16px;color:${palette.text.secondary}}section{margin:28px 0}pre{padding:20px;border:1px solid ${palette.border.subtle};border-radius:8px;overflow:auto;font:14px/1.7 Consolas,monospace}header{border-bottom:2px solid ${palette.brand.accent};padding-bottom:12px}</style><main><header><h1>Velune Dark</h1><p>Prévia TextMate gerada com Shiki; não é uma captura do VS Code.</p></header>${rendered.join('')}</main></html>`;
+const preview = `<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Velune — syntax preview</title><style>body{margin:0;background:${palette.background.editor};color:${palette.text.primary};font:15px/1.6 system-ui}main{max-width:1040px;margin:auto;padding:24px}h1,h2{font-weight:500}h2{font-size:16px;color:${palette.text.secondary}}section{margin:28px 0}pre{padding:20px;border:1px solid ${palette.border.subtle};border-radius:8px;overflow:auto;font:14px/1.7 Consolas,monospace}header{border-bottom:2px solid ${palette.brand.accent};padding-bottom:12px}</style><main><header><h1>Velune Dark</h1><p>TextMate syntax preview generated with Shiki. This is not an editor screenshot.</p></header>${rendered.join('')}</main></html>`;
 await writeFile(path.join(root, 'dist/token-preview.html'), preview);
 await writeFile(path.join(root, 'docs/token-preview.html'), preview);
 console.log(`Passed ${checks.length} checks; ${contrasts.length} contrast pairs; ${fixtures.length} real TextMate grammars.`);

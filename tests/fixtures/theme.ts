@@ -1,4 +1,4 @@
-// Tokens e estruturas comuns em TypeScript.
+// Tokens and common TypeScript structures.
 interface Theme {
   name: string;
   dark: boolean;
@@ -16,6 +16,6 @@ export function alpha(value: number): number {
 }
 
 type Palette<T> = Readonly<Record<string, T>>;
-const message = `Tema ${theme.name}: ${alpha(0.8)}`;
+const message = `Theme ${theme.name}: ${alpha(0.8)}`;
 const hexPattern = /^#[0-9a-f]{6}$/i;
 console.log(message, hexPattern.test(theme.background));
