@@ -4,13 +4,13 @@
 
 Tema dark inspirado na paleta de Evernight, de Honkai: Star Rail. Combina fundo quase preto com violeta discreto, sintaxe em lavanda, rosa e azul, e detalhes carmesim na interface.
 
-Versão 0.1.2: protótipo para VS Code e editores compatíveis, com roteiro de avaliação no Cursor. A identidade local da extensão é `muowl.velune`; esse identificador não confirma a existência ou a disponibilidade de um publisher no Marketplace.
+Versão 0.1.3: versão inicial para VS Code e editores compatíveis, com roteiro de avaliação no Cursor. A identidade local da extensão é `muowl.velune`; esse identificador não confirma a existência ou a disponibilidade de um publisher no Marketplace.
 
 Repositório: [Muowl/velune](https://github.com/Muowl/velune).
 
 ## Instalação
 
-1. Obtenha `velune-0.1.2.vsix` compilando o projeto ou baixando o artefato de uma execução bem-sucedida em [Actions](https://github.com/Muowl/velune/actions/workflows/validate.yml). O download de artefatos exige login no GitHub; extraia o ZIP antes de instalar.
+1. Obtenha `velune-0.1.3.vsix` compilando o projeto ou baixando o artefato de uma execução bem-sucedida em [Actions](https://github.com/Muowl/velune/actions/workflows/validate.yml). O download de artefatos exige login no GitHub; extraia o ZIP antes de instalar.
 2. No VS Code ou Cursor (modo IDE), abra Extensões (`Ctrl+Shift+X`).
 3. No menu `…`, escolha **Install from VSIX… / Instalar do VSIX…** e selecione o arquivo.
 4. Abra a paleta de comandos (`Ctrl+Shift+P`), execute **Preferences: Color Theme / Preferências: Tema de Cores** e escolha **Velune Dark**.
@@ -18,7 +18,7 @@ Repositório: [Muowl/velune](https://github.com/Muowl/velune).
 Pelo terminal, com o comando `code` disponível:
 
 ```sh
-code --install-extension velune-0.1.2.vsix
+code --install-extension velune-0.1.3.vsix
 ```
 
 No Cursor, também é possível executar `Extensions: Install from VSIX…` pela paleta de comandos. Consulte o [guia de C#, C++ e Cursor](docs/COMPATIBILIDADE.md) para configuração e avaliação.
@@ -48,11 +48,13 @@ Erros usam um vermelho mais claro que o destaque da marca. Avisos, informações
 
 ## Cobertura e limites
 
-Os testes usam gramáticas TextMate reais de TypeScript, JavaScript, TSX, HTML, CSS, JSON, Python, Markdown, C# e C++. Há 56 verificações específicas de símbolos em C# e C++, além dos testes gerais. As regras semânticas cobrem tokens padrão e classificações próprias de C# e clangd. Os contratos estáticos usam declarações dos projetos C#, C/C++ e clangd; não executam esses servidores de linguagem.
+Os testes usam gramáticas TextMate reais de TypeScript, JavaScript, TSX, HTML, CSS, JSON, Python, Markdown, C#, C++, Rust e Java. Há 142 verificações específicas de símbolos nessas quatro últimas linguagens, além dos testes gerais. As regras semânticas cobrem tokens padrão e classificações próprias dos fornecedores. Os contratos estáticos usam declarações dos projetos C#, C/C++, clangd, rust-analyzer e Java da Red Hat; não executam esses servidores de linguagem.
 
 A extensão foi empacotada e validada automaticamente, mas ainda precisa de uma sessão de uso no VS Code e no Cursor. A compatibilidade com o Cursor se baseia no formato de extensão de tema e nas interfaces comuns do editor; a interface própria de IA ainda requer avaliação no aplicativo. Os testes de gramática usam Shiki com versão fixa; extensões instaladas podem oferecer gramáticas ou tokens semânticos diferentes. A aparência também depende da fonte, do monitor e de personalizações do usuário.
 
 As verificações de contraste cobrem texto e sintaxe no editor, seleção, linha atual, busca, referências e fundos de diferenças do Git, além de pares da interface e do terminal. Decorações sobrepostas e estados adicionais exigem revisão visual. O preto ANSI é uma cor de base deliberadamente escura e não satisfaz o limiar adotado para texto normal. Esses testes não constituem uma certificação de acessibilidade.
+
+O [guia de publicação](docs/PUBLICACAO.md) registra o pacote, os comandos de envio e as pendências de licença e avaliação manual.
 
 ## Desenvolvimento
 
@@ -67,7 +69,7 @@ npm run package
 
 `npm run build:icon` regenera o ícone a partir de `assets/velune-mark.svg`. O build completo também gera as exportações PNG de 1024 pixels em `dist/velune-icon-1024.png` e `dist/velune-mark-1024.png`, esta última com transparência. A ferramenta de renderização fica restrita ao desenvolvimento.
 
-O VSIX será criado em `dist/velune-0.1.2.vsix`. Os testes também geram `dist/token-preview.html` e sua cópia versionada `docs/token-preview.html`, uma prévia da sintaxe com as gramáticas reais, e `docs/validation.json`, com os resultados numéricos.
+O VSIX será criado em `dist/velune-0.1.3.vsix`. Os testes também geram `dist/token-preview.html` e sua cópia versionada `docs/token-preview.html`, uma prévia da sintaxe com as gramáticas reais, e `docs/validation.json`, com os resultados numéricos.
 
 O workflow **Validate Velune** executa o empacotamento e os testes em pushes para `main` e em pull requests. Ele verifica se os arquivos gerados estão atualizados e disponibiliza o VSIX, a prévia e o relatório como artefatos por 30 dias. Não há publicação automática em marketplaces.
 

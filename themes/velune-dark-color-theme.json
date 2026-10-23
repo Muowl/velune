@@ -665,6 +665,105 @@
       }
     },
     {
+      "name": "Java type references and generics",
+      "scope": [
+        "storage.type.java",
+        "storage.type.generic.java",
+        "storage.type.object.array.java",
+        "storage.type.primitive.array.java",
+        "storage.modifier.import.java",
+        "storage.modifier.package.java"
+      ],
+      "settings": {
+        "foreground": "#E2B1D6",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "Java local inference keyword",
+      "scope": [
+        "storage.type.local.java"
+      ],
+      "settings": {
+        "foreground": "#C99AF7",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "Java annotations",
+      "scope": [
+        "storage.type.annotation.java",
+        "punctuation.definition.annotation.java"
+      ],
+      "settings": {
+        "foreground": "#E2B1D6",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "Java lambda arrows",
+      "scope": [
+        "storage.type.function.arrow.java"
+      ],
+      "settings": {
+        "foreground": "#B4A7C2",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "Java generic wildcard",
+      "scope": [
+        "storage.type.generic.wildcard.java"
+      ],
+      "settings": {
+        "foreground": "#B4A7C2",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "Java documentation",
+      "scope": [
+        "comment.block.javadoc.java keyword",
+        "comment.block.javadoc.java variable",
+        "comment.block.javadoc.java entity",
+        "comment.block.javadoc.java storage.type"
+      ],
+      "settings": {
+        "foreground": "#96889F",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "Rust attributes",
+      "scope": [
+        "meta.attribute.rust"
+      ],
+      "settings": {
+        "foreground": "#E2B1D6",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "Rust character delimiters",
+      "scope": [
+        "punctuation.definition.char.rust"
+      ],
+      "settings": {
+        "foreground": "#B5CBAA",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "Rust captured format variables",
+      "scope": [
+        "meta.interpolation.rust"
+      ],
+      "settings": {
+        "foreground": "#E6DFEC",
+        "fontStyle": ""
+      }
+    },
+    {
       "name": "Markdown headings",
       "scope": [
         "markup.heading",
@@ -1123,6 +1222,207 @@
       "underline": false
     },
     "*.constructorOrDestructor:cpp": {
+      "foreground": "#AFBEF1",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "attribute:rust": {
+      "foreground": "#E2B1D6",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "builtinAttribute:rust": {
+      "foreground": "#E2B1D6",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "derive:rust": {
+      "foreground": "#E2B1D6",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "deriveHelper:rust": {
+      "foreground": "#E2B1D6",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "toolModule:rust": {
+      "foreground": "#E2B1D6",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "boolean:rust": {
+      "foreground": "#E2C291",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "builtinType:rust": {
+      "foreground": "#E2B1D6",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "character:rust": {
+      "foreground": "#B5CBAA",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "constParameter:rust": {
+      "foreground": "#E6DFEC",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "const:rust": {
+      "foreground": "#E6DFEC",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "static:rust": {
+      "foreground": "#E6DFEC",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "lifetime:rust": {
+      "foreground": "#E2B1D6",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "escapeSequence:rust": {
+      "foreground": "#95CCC8",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "formatSpecifier:rust": {
+      "foreground": "#95CCC8",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "invalidEscapeSequence:rust": {
+      "foreground": "#F0808C",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "punctuation:rust": {
+      "foreground": "#B4A7C2",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "macroBang:rust": {
+      "foreground": "#AFBEF1",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "selfKeyword:rust": {
+      "foreground": "#E6DFEC",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "selfTypeKeyword:rust": {
+      "foreground": "#E2B1D6",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "unresolvedReference:rust": {
+      "foreground": "#E6DFEC",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "angle:rust": {
+      "foreground": "#B4A7C2",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "attributeBracket:rust": {
+      "foreground": "#B4A7C2",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "brace:rust": {
+      "foreground": "#B4A7C2",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "bracket:rust": {
+      "foreground": "#B4A7C2",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "colon:rust": {
+      "foreground": "#B4A7C2",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "comma:rust": {
+      "foreground": "#B4A7C2",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "dot:rust": {
+      "foreground": "#B4A7C2",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "parenthesis:rust": {
+      "foreground": "#B4A7C2",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "semicolon:rust": {
+      "foreground": "#B4A7C2",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "*.mutable:rust": {
+      "underline": false
+    },
+    "decorator:java": {
+      "foreground": "#E2B1D6",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "annotationMember:java": {
+      "foreground": "#E6DFEC",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "*.documentation:java": {
+      "foreground": "#96889F",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "*.constructor:java": {
       "foreground": "#AFBEF1",
       "bold": false,
       "italic": false,

@@ -282,5 +282,439 @@
       "Comments",
       "text.comment"
     ]
+  ],
+  "rust": [
+    [
+      "const THEME_NAME",
+      "const",
+      "syntax.keyword"
+    ],
+    [
+      "const THEME_NAME",
+      "THEME_NAME",
+      "text.primary"
+    ],
+    [
+      "ENABLED: bool = true",
+      "bool",
+      "syntax.type"
+    ],
+    [
+      "ENABLED: bool = true",
+      "true",
+      "syntax.number"
+    ],
+    [
+      "#[derive(Debug",
+      "derive",
+      "syntax.type"
+    ],
+    [
+      "#[derive(Debug",
+      "Debug",
+      "syntax.type"
+    ],
+    [
+      "#[derive(Debug",
+      "#[",
+      "text.punctuation"
+    ],
+    [
+      "enum ThemeMode",
+      "ThemeMode",
+      "syntax.type"
+    ],
+    [
+      "struct Theme<'a",
+      "Theme",
+      "syntax.type"
+    ],
+    [
+      "struct Theme<'a",
+      "a",
+      "syntax.type"
+    ],
+    [
+      "const N: usize",
+      "N",
+      "text.primary"
+    ],
+    [
+      "const N: usize",
+      "usize",
+      "syntax.type"
+    ],
+    [
+      "trait Named",
+      "trait",
+      "syntax.keyword"
+    ],
+    [
+      "trait Named",
+      "Named",
+      "syntax.type"
+    ],
+    [
+      "fn name(&self)",
+      "name",
+      "syntax.function"
+    ],
+    [
+      "fn name(&self)",
+      "self",
+      "text.primary"
+    ],
+    [
+      "&mut fmt::Formatter",
+      "mut",
+      "syntax.keyword"
+    ],
+    [
+      "&mut fmt::Formatter",
+      "Formatter",
+      "syntax.type"
+    ],
+    [
+      "write!(formatter",
+      "write!",
+      "syntax.function"
+    ],
+    [
+      "\"Theme: {}\\n\"",
+      "{}",
+      "syntax.escape"
+    ],
+    [
+      "\"Theme: {}\\n\"",
+      "\\n",
+      "syntax.escape"
+    ],
+    [
+      "type ThemeResult<T>",
+      "ThemeResult",
+      "syntax.type"
+    ],
+    [
+      "type ThemeResult<T>",
+      "T>",
+      "syntax.type"
+    ],
+    [
+      "macro_rules! theme_label",
+      "macro_rules!",
+      "syntax.function"
+    ],
+    [
+      "macro_rules! theme_label",
+      "theme_label",
+      "syntax.function"
+    ],
+    [
+      "async fn load_theme",
+      "async",
+      "syntax.keyword"
+    ],
+    [
+      "async fn load_theme",
+      "load_theme",
+      "syntax.function"
+    ],
+    [
+      "return Err(\"Empty name\")",
+      "return",
+      "syntax.keyword"
+    ],
+    [
+      "\"Empty name\"",
+      "Empty",
+      "syntax.string"
+    ],
+    [
+      "[225, 76, 111]",
+      "225",
+      "syntax.number"
+    ],
+    [
+      "let mut theme",
+      "theme",
+      "text.primary"
+    ],
+    [
+      "r#\"{\"theme\":\"Velune\"",
+      "theme",
+      "syntax.string"
+    ],
+    [
+      "marker = 'v'",
+      "v",
+      "syntax.string"
+    ],
+    [
+      "marker = 'v'",
+      "'",
+      "syntax.string"
+    ],
+    [
+      "let separator = '\\n'",
+      "\\n",
+      "syntax.escape"
+    ],
+    [
+      "\"{json}{separator}{marker}\"",
+      "json",
+      "text.primary"
+    ],
+    [
+      "\"{json}{separator}{marker}\"",
+      "{",
+      "syntax.escape"
+    ],
+    [
+      "match theme.mode",
+      "match",
+      "syntax.keyword"
+    ],
+    [
+      "// Comments",
+      "Comments",
+      "text.comment"
+    ],
+    [
+      "/// A borrowed",
+      "borrowed",
+      "text.comment"
+    ]
+  ],
+  "java": [
+    [
+      "package velune.preview",
+      "package",
+      "syntax.keyword"
+    ],
+    [
+      "package velune.preview",
+      "velune",
+      "syntax.type"
+    ],
+    [
+      "import java.util.List",
+      "java",
+      "syntax.type"
+    ],
+    [
+      "final class ThemePreview",
+      "class",
+      "syntax.keyword"
+    ],
+    [
+      "class ThemePreview",
+      "ThemePreview",
+      "syntax.type"
+    ],
+    [
+      "String THEME_NAME",
+      "String",
+      "syntax.type"
+    ],
+    [
+      "String THEME_NAME",
+      "THEME_NAME",
+      "text.primary"
+    ],
+    [
+      "boolean ENABLED = true",
+      "boolean",
+      "syntax.type"
+    ],
+    [
+      "boolean ENABLED = true",
+      "true",
+      "syntax.number"
+    ],
+    [
+      "enum ThemeMode",
+      "ThemeMode",
+      "syntax.type"
+    ],
+    [
+      "record Accent(int red",
+      "record",
+      "syntax.keyword"
+    ],
+    [
+      "record Accent(int red",
+      "Accent",
+      "syntax.type"
+    ],
+    [
+      "record Accent(int red",
+      "int",
+      "syntax.type"
+    ],
+    [
+      "record Accent(int red",
+      "red",
+      "text.primary"
+    ],
+    [
+      "record Theme(String name",
+      "String",
+      "syntax.type"
+    ],
+    [
+      "record Theme(String name",
+      "name",
+      "text.primary"
+    ],
+    [
+      "interface ThemeStore<T>",
+      "ThemeStore",
+      "syntax.type"
+    ],
+    [
+      "interface ThemeStore<T>",
+      "T>",
+      "syntax.type"
+    ],
+    [
+      "Optional<T> find",
+      "Optional",
+      "syntax.type"
+    ],
+    [
+      "Optional<T> find",
+      "find",
+      "syntax.function"
+    ],
+    [
+      "* @param theme",
+      "@param",
+      "text.comment"
+    ],
+    [
+      "* @param theme",
+      "theme",
+      "text.comment"
+    ],
+    [
+      "* @return",
+      "@return",
+      "text.comment"
+    ],
+    [
+      "@Deprecated(since",
+      "Deprecated",
+      "syntax.type"
+    ],
+    [
+      "@Deprecated(since",
+      "@",
+      "syntax.type"
+    ],
+    [
+      "@Deprecated(since",
+      "since",
+      "text.primary"
+    ],
+    [
+      "@SafeVarargs",
+      "SafeVarargs",
+      "syntax.type"
+    ],
+    [
+      "<T> List<T> entries",
+      "T>",
+      "syntax.type"
+    ],
+    [
+      "<T> List<T> entries",
+      "List",
+      "syntax.type"
+    ],
+    [
+      "<T> List<T> entries",
+      "entries",
+      "syntax.function"
+    ],
+    [
+      "\"Theme: \"",
+      "Theme",
+      "syntax.string"
+    ],
+    [
+      "\"\\n\"",
+      "\\n",
+      "syntax.escape"
+    ],
+    [
+      "Function<Theme, String>",
+      "Function",
+      "syntax.type"
+    ],
+    [
+      "Function<Theme, String>",
+      "Theme",
+      "syntax.type"
+    ],
+    [
+      "value -> value.name()",
+      "->",
+      "text.punctuation"
+    ],
+    [
+      "var names",
+      "var",
+      "syntax.keyword"
+    ],
+    [
+      "var names",
+      "names",
+      "text.primary"
+    ],
+    [
+      "{\"theme\":\"Velune\",\"dark\":true}",
+      "Velune",
+      "syntax.string"
+    ],
+    [
+      "marker = 'v'",
+      "v",
+      "syntax.string"
+    ],
+    [
+      "switch (theme.mode())",
+      "switch",
+      "syntax.keyword"
+    ],
+    [
+      "case DARK ->",
+      "->",
+      "text.punctuation"
+    ],
+    [
+      "new Accent(225",
+      "225",
+      "syntax.number"
+    ],
+    [
+      "// Comments",
+      "Comments",
+      "text.comment"
+    ],
+    [
+      "main(String[] args)",
+      "String",
+      "syntax.type"
+    ],
+    [
+      "new Theme(THEME_NAME",
+      "Theme",
+      "syntax.function"
+    ],
+    [
+      "Optional<? extends Theme>",
+      "?",
+      "text.punctuation"
+    ]
   ]
 }

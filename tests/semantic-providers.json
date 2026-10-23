@@ -322,6 +322,221 @@
         "defaultLibrary",
         "dependentName"
       ]
+    },
+    {
+      "id": "rust-analyzer",
+      "language": "rust",
+      "source": "https://github.com/rust-lang/rust-analyzer/blob/master/editors/code/package.json",
+      "blobSha": "eea06eacf4423535c9da909386402c44b89f2822",
+      "types": [
+        {
+          "id": "angle",
+          "superType": "punctuation"
+        },
+        {
+          "id": "arithmetic",
+          "superType": "operator"
+        },
+        {
+          "id": "attribute"
+        },
+        {
+          "id": "attributeBracket",
+          "superType": "punctuation"
+        },
+        {
+          "id": "bitwise",
+          "superType": "operator"
+        },
+        {
+          "id": "boolean",
+          "superType": "keyword"
+        },
+        {
+          "id": "brace",
+          "superType": "punctuation"
+        },
+        {
+          "id": "bracket",
+          "superType": "punctuation"
+        },
+        {
+          "id": "builtinAttribute",
+          "superType": "attribute"
+        },
+        {
+          "id": "builtinType",
+          "superType": "type"
+        },
+        {
+          "id": "character",
+          "superType": "string"
+        },
+        {
+          "id": "colon",
+          "superType": "punctuation"
+        },
+        {
+          "id": "comma",
+          "superType": "punctuation"
+        },
+        {
+          "id": "comparison",
+          "superType": "operator"
+        },
+        {
+          "id": "constParameter"
+        },
+        {
+          "id": "const",
+          "superType": "variable"
+        },
+        {
+          "id": "derive",
+          "superType": "attribute"
+        },
+        {
+          "id": "deriveHelper",
+          "superType": "attribute"
+        },
+        {
+          "id": "dot",
+          "superType": "punctuation"
+        },
+        {
+          "id": "escapeSequence"
+        },
+        {
+          "id": "formatSpecifier"
+        },
+        {
+          "id": "invalidEscapeSequence"
+        },
+        {
+          "id": "label"
+        },
+        {
+          "id": "lifetime"
+        },
+        {
+          "id": "logical",
+          "superType": "operator"
+        },
+        {
+          "id": "macroBang",
+          "superType": "punctuation"
+        },
+        {
+          "id": "parenthesis",
+          "superType": "punctuation"
+        },
+        {
+          "id": "procMacro",
+          "superType": "macro"
+        },
+        {
+          "id": "punctuation"
+        },
+        {
+          "id": "operator",
+          "superType": "punctuation"
+        },
+        {
+          "id": "selfKeyword",
+          "superType": "keyword"
+        },
+        {
+          "id": "selfTypeKeyword",
+          "superType": "keyword"
+        },
+        {
+          "id": "semicolon",
+          "superType": "punctuation"
+        },
+        {
+          "id": "static",
+          "superType": "variable"
+        },
+        {
+          "id": "toolModule",
+          "superType": "decorator"
+        },
+        {
+          "id": "typeAlias",
+          "superType": "type"
+        },
+        {
+          "id": "union",
+          "superType": "type"
+        },
+        {
+          "id": "unresolvedReference"
+        }
+      ],
+      "modifiers": [
+        "async",
+        "attribute",
+        "callable",
+        "constant",
+        "consuming",
+        "controlFlow",
+        "crateRoot",
+        "injected",
+        "intraDocLink",
+        "library",
+        "macro",
+        "mutable",
+        "procMacro",
+        "public",
+        "reference",
+        "trait",
+        "unsafe"
+      ]
+    },
+    {
+      "id": "java",
+      "language": "java",
+      "source": "https://github.com/redhat-developer/vscode-java/blob/main/package.json",
+      "blobSha": "3651eecd5214d545310930005ff7984e9572dd71",
+      "types": [
+        {
+          "id": "annotation",
+          "superType": "type"
+        },
+        {
+          "id": "annotationMember",
+          "superType": "method"
+        },
+        {
+          "id": "modifier",
+          "superType": "keyword"
+        },
+        {
+          "id": "record",
+          "superType": "class"
+        },
+        {
+          "id": "recordComponent",
+          "superType": "parameter"
+        }
+      ],
+      "modifiers": [
+        "public",
+        "private",
+        "protected",
+        "native",
+        "generic",
+        "typeArgument",
+        "importDeclaration",
+        "constructor"
+      ],
+      "extraSources": [
+        {
+          "source": "https://github.com/eclipse-jdtls/eclipse.jdt.ls/blob/main/org.eclipse.jdt.ls.core/src/org/eclipse/jdt/ls/core/internal/semantictokens/SemanticTokensVisitor.java",
+          "blobSha": "6dadf78a6ddf20777025093cd787e7c4f5f9fd94",
+          "behavior": "Tokens inside Javadoc include the standard documentation modifier."
+        }
+      ]
     }
   ]
 }

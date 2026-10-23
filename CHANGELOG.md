@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.3 — 2026-10-23
+
+- Validação de Rust e Java com 86 verificações específicas de sintaxe, somando 12 gramáticas na suíte.
+- Java: cores de referências a tipos, genéricos, arrays, anotações, lambdas, wildcard e Javadoc corrigidas.
+- Rust: atributos, caracteres e variáveis capturadas em strings de formato ajustados.
+- Regras semânticas para rust-analyzer, incluindo booleanos, lifetimes, escapes, atributos e variáveis mutáveis.
+- Java: construtores e documentação semântica alinhados à sintaxe básica.
+- Documentação da cobertura e guia de publicação atualizados.
+
 ## 0.1.2 — 2026-10-23
 
 - Ícone aprovado: guarda-chuva inclinado com copa sólida lavanda e cabo carmesim.

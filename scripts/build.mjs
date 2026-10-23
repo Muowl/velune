@@ -123,6 +123,15 @@ export function createTheme() {
   syntax('C++ named casts', ['keyword.operator.cast.cpp', 'keyword.operator.cast.static_cast.cpp', 'keyword.operator.cast.dynamic_cast.cpp', 'keyword.operator.cast.const_cast.cpp', 'keyword.operator.cast.reinterpret_cast.cpp'], kw);
   // Keep XML documentation quiet, including nested tag and attribute scopes.
   syntax('C# XML documentation', ['comment.block.documentation.cs', 'comment.block.documentation.cs entity.name.tag', 'comment.block.documentation.cs entity.other.attribute-name', 'comment.block.documentation.cs punctuation.definition.tag', 'comment.block.documentation.cs punctuation.definition.string', 'comment.block.documentation.cs string'], comment);
+  syntax('Java type references and generics', ['storage.type.java', 'storage.type.generic.java', 'storage.type.object.array.java', 'storage.type.primitive.array.java', 'storage.modifier.import.java', 'storage.modifier.package.java'], type);
+  syntax('Java local inference keyword', ['storage.type.local.java'], kw);
+  syntax('Java annotations', ['storage.type.annotation.java', 'punctuation.definition.annotation.java'], type);
+  syntax('Java lambda arrows', ['storage.type.function.arrow.java'], punct);
+  syntax('Java generic wildcard', ['storage.type.generic.wildcard.java'], punct);
+  syntax('Java documentation', ['comment.block.javadoc.java keyword', 'comment.block.javadoc.java variable', 'comment.block.javadoc.java entity', 'comment.block.javadoc.java storage.type'], comment);
+  syntax('Rust attributes', ['meta.attribute.rust'], type);
+  syntax('Rust character delimiters', ['punctuation.definition.char.rust'], string);
+  syntax('Rust captured format variables', ['meta.interpolation.rust'], fg);
   syntax('Markdown headings', ['markup.heading', 'entity.name.section.markdown'], kw);
   syntax('Markdown inline code', ['markup.inline.raw', 'markup.fenced_code.block.markdown'], string);
   syntax('Markdown links', ['markup.underline.link', 'string.other.link'], fn);
@@ -160,6 +169,23 @@ export function createTheme() {
     semanticTokenColors[`${token}:cpp`] = plain(color);
   }
   semanticTokenColors['*.constructorOrDestructor:cpp'] = plain(fn);
+  const rust = {
+    attribute: type, builtinAttribute: type, derive: type, deriveHelper: type, toolModule: type,
+    boolean: number, builtinType: type, character: string, constParameter: fg,
+    const: fg, static: fg, lifetime: type, escapeSequence: cyan, formatSpecifier: cyan,
+    invalidEscapeSequence: error, punctuation: punct, macroBang: fn, selfKeyword: fg,
+    selfTypeKeyword: type, unresolvedReference: fg
+  };
+  for (const [token, color] of Object.entries(rust)) semanticTokenColors[`${token}:rust`] = plain(color);
+  for (const token of ['angle', 'attributeBracket', 'brace', 'bracket', 'colon', 'comma', 'dot', 'parenthesis', 'semicolon']) {
+    semanticTokenColors[`${token}:rust`] = plain(punct);
+  }
+  // rust-analyzer's scope fallback would otherwise underline mutable locals.
+  semanticTokenColors['*.mutable:rust'] = { underline: false };
+  semanticTokenColors['decorator:java'] = plain(type);
+  semanticTokenColors['annotationMember:java'] = plain(fg);
+  semanticTokenColors['*.documentation:java'] = plain(comment);
+  semanticTokenColors['*.constructor:java'] = plain(fn);
   // Color and style only; the extension contributes no executable code or settings.
   return { $schema: 'vscode://schemas/color-theme', name: 'Velune Dark', type: 'dark', semanticHighlighting: true, colors, tokenColors, semanticTokenColors };
 }

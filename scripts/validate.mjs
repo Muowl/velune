@@ -65,6 +65,7 @@ for (const [token, color] of Object.entries(mapping)) check(`Semantic mapping: $
 const fixtures = [
   ['typescript', 'theme.ts'], ['javascript', 'example.js'], ['tsx', 'component.tsx'],
   ['csharp', 'theme.cs'], ['cpp', 'theme.cpp'],
+  ['rust', 'theme.rs'], ['java', 'ThemePreview.java'],
   ['html', 'index.html'], ['css', 'styles.css'], ['json', 'settings.json'], ['python', 'theme.py'], ['markdown', 'readme.md']
 ];
 const highlighter = await createHighlighter({ themes: [{ ...theme, name: 'velune' }], langs: fixtures.map(([lang]) => lang) });
@@ -134,7 +135,20 @@ const providerCases = {
     operatorOverload: 'text.punctuation', memberOperatorOverload: 'text.punctuation',
     newOperator: 'text.punctuation', customLiteral: 'syntax.number', numberLiteral: 'syntax.number', stringLiteral: 'syntax.string'
   },
-  clangd: { concept: 'syntax.type', modifier: 'syntax.keyword', bracket: 'text.punctuation', unknown: 'text.primary', typeParameter: 'syntax.type', macro: 'syntax.function', enumMember: 'syntax.number', property: 'text.primary' }
+  clangd: { concept: 'syntax.type', modifier: 'syntax.keyword', bracket: 'text.punctuation', unknown: 'text.primary', typeParameter: 'syntax.type', macro: 'syntax.function', enumMember: 'syntax.number', property: 'text.primary' },
+  'rust-analyzer': {
+    attribute: 'syntax.type', builtinAttribute: 'syntax.type', derive: 'syntax.type', deriveHelper: 'syntax.type',
+    toolModule: 'syntax.type', boolean: 'syntax.number', builtinType: 'syntax.type', character: 'syntax.string',
+    constParameter: 'text.primary', const: 'text.primary', static: 'text.primary', lifetime: 'syntax.type',
+    escapeSequence: 'syntax.escape', formatSpecifier: 'syntax.escape', invalidEscapeSequence: 'state.error',
+    punctuation: 'text.punctuation', macroBang: 'syntax.function', selfKeyword: 'text.primary',
+    selfTypeKeyword: 'syntax.type', unresolvedReference: 'text.primary',
+    angle: 'text.punctuation', attributeBracket: 'text.punctuation', brace: 'text.punctuation',
+    bracket: 'text.punctuation', colon: 'text.punctuation', comma: 'text.punctuation', dot: 'text.punctuation',
+    parenthesis: 'text.punctuation', semicolon: 'text.punctuation',
+    procMacro: 'syntax.function', arithmetic: 'text.punctuation', typeAlias: 'syntax.type', union: 'syntax.type'
+  },
+  java: { annotation: 'syntax.type', annotationMember: 'text.primary', modifier: 'syntax.keyword', record: 'syntax.type', recordComponent: 'text.primary' }
 };
 for (const provider of providers) {
   for (const [token, colorRole] of Object.entries(providerCases[provider.id])) {
@@ -146,6 +160,9 @@ for (const provider of providers) {
 }
 check('clangd constructors retain the callable color', theme.semanticTokenColors['*.constructorOrDestructor:cpp'].foreground === palette.syntax.function);
 check('Deprecated symbols retain strikethrough', theme.semanticTokenColors['*.deprecated'].strikethrough === true);
+check('Java constructors retain the callable color', theme.semanticTokenColors['*.constructor:java'].foreground === palette.syntax.function);
+check('Java documentation tokens retain the comment color', theme.semanticTokenColors['*.documentation:java'].foreground === palette.text.comment);
+check('Rust mutable symbols do not receive underline', theme.semanticTokenColors['*.mutable:rust'].underline === false);
 highlighter.dispose();
 await mkdir(path.join(root, 'dist'), { recursive: true });
 await mkdir(path.join(root, 'docs'), { recursive: true });

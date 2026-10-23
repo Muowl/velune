@@ -1,12 +1,14 @@
 {
-  "version": "0.1.2",
-  "checks": 275,
+  "version": "0.1.3",
+  "checks": 408,
   "languages": [
     "typescript",
     "javascript",
     "tsx",
     "csharp",
     "cpp",
+    "rust",
+    "java",
     "html",
     "css",
     "json",
@@ -734,9 +736,11 @@
     "providers": [
       "csharp",
       "cpptools",
-      "clangd"
+      "clangd",
+      "rust-analyzer",
+      "java"
     ],
-    "cases": 42
+    "cases": 80
   },
   "limits": [
     "No live VS Code, Cursor session or language-server integration was run.",
