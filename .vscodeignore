@@ -1,0 +1,14 @@
+core/**
+scripts/**
+tests/**
+docs/**
+dist/**
+node_modules/**
+package-lock.json
+.gitignore
+.vscodeignore
+.vscode/**
+.github/**
+.node-version
+.gitattributes
+**/*.vsix

@@ -1,0 +1,736 @@
+{
+  "version": "0.1.0",
+  "checks": 169,
+  "languages": [
+    "typescript",
+    "javascript",
+    "tsx",
+    "html",
+    "css",
+    "json",
+    "python",
+    "markdown"
+  ],
+  "contrasts": [
+    {
+      "name": "text on editor",
+      "foreground": "#E6DFEC",
+      "background": "#141119",
+      "ratio": 14.3518,
+      "minimum": 4.5
+    },
+    {
+      "name": "comment on editor",
+      "foreground": "#96889F",
+      "background": "#141119",
+      "ratio": 5.6222,
+      "minimum": 4.5
+    },
+    {
+      "name": "punctuation on editor",
+      "foreground": "#B4A7C2",
+      "background": "#141119",
+      "ratio": 8.2273,
+      "minimum": 4.5
+    },
+    {
+      "name": "keyword on editor",
+      "foreground": "#C99AF7",
+      "background": "#141119",
+      "ratio": 8.4067,
+      "minimum": 4.5
+    },
+    {
+      "name": "function on editor",
+      "foreground": "#AFBEF1",
+      "background": "#141119",
+      "ratio": 10.1946,
+      "minimum": 4.5
+    },
+    {
+      "name": "type on editor",
+      "foreground": "#E2B1D6",
+      "background": "#141119",
+      "ratio": 10.226,
+      "minimum": 4.5
+    },
+    {
+      "name": "string on editor",
+      "foreground": "#B5CBAA",
+      "background": "#141119",
+      "ratio": 10.7544,
+      "minimum": 4.5
+    },
+    {
+      "name": "number on editor",
+      "foreground": "#E2C291",
+      "background": "#141119",
+      "ratio": 10.9962,
+      "minimum": 4.5
+    },
+    {
+      "name": "escape on editor",
+      "foreground": "#95CCC8",
+      "background": "#141119",
+      "ratio": 10.4533,
+      "minimum": 4.5
+    },
+    {
+      "name": "text on selection",
+      "foreground": "#E6DFEC",
+      "background": "#2D203B",
+      "ratio": 11.6778,
+      "minimum": 4.5
+    },
+    {
+      "name": "comment on selection",
+      "foreground": "#96889F",
+      "background": "#2D203B",
+      "ratio": 4.5746,
+      "minimum": 4.5
+    },
+    {
+      "name": "punctuation on selection",
+      "foreground": "#B4A7C2",
+      "background": "#2D203B",
+      "ratio": 6.6944,
+      "minimum": 4.5
+    },
+    {
+      "name": "keyword on selection",
+      "foreground": "#C99AF7",
+      "background": "#2D203B",
+      "ratio": 6.8404,
+      "minimum": 4.5
+    },
+    {
+      "name": "function on selection",
+      "foreground": "#AFBEF1",
+      "background": "#2D203B",
+      "ratio": 8.2951,
+      "minimum": 4.5
+    },
+    {
+      "name": "type on selection",
+      "foreground": "#E2B1D6",
+      "background": "#2D203B",
+      "ratio": 8.3207,
+      "minimum": 4.5
+    },
+    {
+      "name": "string on selection",
+      "foreground": "#B5CBAA",
+      "background": "#2D203B",
+      "ratio": 8.7506,
+      "minimum": 4.5
+    },
+    {
+      "name": "number on selection",
+      "foreground": "#E2C291",
+      "background": "#2D203B",
+      "ratio": 8.9474,
+      "minimum": 4.5
+    },
+    {
+      "name": "escape on selection",
+      "foreground": "#95CCC8",
+      "background": "#2D203B",
+      "ratio": 8.5056,
+      "minimum": 4.5
+    },
+    {
+      "name": "text on currentLine",
+      "foreground": "#E6DFEC",
+      "background": "#1C1724",
+      "ratio": 13.4715,
+      "minimum": 4.5
+    },
+    {
+      "name": "comment on currentLine",
+      "foreground": "#96889F",
+      "background": "#1C1724",
+      "ratio": 5.2773,
+      "minimum": 4.5
+    },
+    {
+      "name": "punctuation on currentLine",
+      "foreground": "#B4A7C2",
+      "background": "#1C1724",
+      "ratio": 7.7226,
+      "minimum": 4.5
+    },
+    {
+      "name": "keyword on currentLine",
+      "foreground": "#C99AF7",
+      "background": "#1C1724",
+      "ratio": 7.8911,
+      "minimum": 4.5
+    },
+    {
+      "name": "function on currentLine",
+      "foreground": "#AFBEF1",
+      "background": "#1C1724",
+      "ratio": 9.5693,
+      "minimum": 4.5
+    },
+    {
+      "name": "type on currentLine",
+      "foreground": "#E2B1D6",
+      "background": "#1C1724",
+      "ratio": 9.5987,
+      "minimum": 4.5
+    },
+    {
+      "name": "string on currentLine",
+      "foreground": "#B5CBAA",
+      "background": "#1C1724",
+      "ratio": 10.0948,
+      "minimum": 4.5
+    },
+    {
+      "name": "number on currentLine",
+      "foreground": "#E2C291",
+      "background": "#1C1724",
+      "ratio": 10.3217,
+      "minimum": 4.5
+    },
+    {
+      "name": "escape on currentLine",
+      "foreground": "#95CCC8",
+      "background": "#1C1724",
+      "ratio": 9.8121,
+      "minimum": 4.5
+    },
+    {
+      "name": "text on wordRead",
+      "foreground": "#E6DFEC",
+      "background": "#2a2234",
+      "ratio": 11.7158,
+      "minimum": 4.5
+    },
+    {
+      "name": "comment on wordRead",
+      "foreground": "#96889F",
+      "background": "#2a2234",
+      "ratio": 4.5896,
+      "minimum": 4.5
+    },
+    {
+      "name": "punctuation on wordRead",
+      "foreground": "#B4A7C2",
+      "background": "#2a2234",
+      "ratio": 6.7162,
+      "minimum": 4.5
+    },
+    {
+      "name": "keyword on wordRead",
+      "foreground": "#C99AF7",
+      "background": "#2a2234",
+      "ratio": 6.8627,
+      "minimum": 4.5
+    },
+    {
+      "name": "function on wordRead",
+      "foreground": "#AFBEF1",
+      "background": "#2a2234",
+      "ratio": 8.3222,
+      "minimum": 4.5
+    },
+    {
+      "name": "type on wordRead",
+      "foreground": "#E2B1D6",
+      "background": "#2a2234",
+      "ratio": 8.3478,
+      "minimum": 4.5
+    },
+    {
+      "name": "string on wordRead",
+      "foreground": "#B5CBAA",
+      "background": "#2a2234",
+      "ratio": 8.7792,
+      "minimum": 4.5
+    },
+    {
+      "name": "number on wordRead",
+      "foreground": "#E2C291",
+      "background": "#2a2234",
+      "ratio": 8.9766,
+      "minimum": 4.5
+    },
+    {
+      "name": "escape on wordRead",
+      "foreground": "#95CCC8",
+      "background": "#2a2234",
+      "ratio": 8.5333,
+      "minimum": 4.5
+    },
+    {
+      "name": "text on wordWrite",
+      "foreground": "#E6DFEC",
+      "background": "#2a2234",
+      "ratio": 11.7158,
+      "minimum": 4.5
+    },
+    {
+      "name": "comment on wordWrite",
+      "foreground": "#96889F",
+      "background": "#2a2234",
+      "ratio": 4.5896,
+      "minimum": 4.5
+    },
+    {
+      "name": "punctuation on wordWrite",
+      "foreground": "#B4A7C2",
+      "background": "#2a2234",
+      "ratio": 6.7162,
+      "minimum": 4.5
+    },
+    {
+      "name": "keyword on wordWrite",
+      "foreground": "#C99AF7",
+      "background": "#2a2234",
+      "ratio": 6.8627,
+      "minimum": 4.5
+    },
+    {
+      "name": "function on wordWrite",
+      "foreground": "#AFBEF1",
+      "background": "#2a2234",
+      "ratio": 8.3222,
+      "minimum": 4.5
+    },
+    {
+      "name": "type on wordWrite",
+      "foreground": "#E2B1D6",
+      "background": "#2a2234",
+      "ratio": 8.3478,
+      "minimum": 4.5
+    },
+    {
+      "name": "string on wordWrite",
+      "foreground": "#B5CBAA",
+      "background": "#2a2234",
+      "ratio": 8.7792,
+      "minimum": 4.5
+    },
+    {
+      "name": "number on wordWrite",
+      "foreground": "#E2C291",
+      "background": "#2a2234",
+      "ratio": 8.9766,
+      "minimum": 4.5
+    },
+    {
+      "name": "escape on wordWrite",
+      "foreground": "#95CCC8",
+      "background": "#2a2234",
+      "ratio": 8.5333,
+      "minimum": 4.5
+    },
+    {
+      "name": "text on search",
+      "foreground": "#E6DFEC",
+      "background": "#292325",
+      "ratio": 11.8487,
+      "minimum": 4.5
+    },
+    {
+      "name": "comment on search",
+      "foreground": "#96889F",
+      "background": "#292325",
+      "ratio": 4.6416,
+      "minimum": 4.5
+    },
+    {
+      "name": "punctuation on search",
+      "foreground": "#B4A7C2",
+      "background": "#292325",
+      "ratio": 6.7923,
+      "minimum": 4.5
+    },
+    {
+      "name": "keyword on search",
+      "foreground": "#C99AF7",
+      "background": "#292325",
+      "ratio": 6.9405,
+      "minimum": 4.5
+    },
+    {
+      "name": "function on search",
+      "foreground": "#AFBEF1",
+      "background": "#292325",
+      "ratio": 8.4165,
+      "minimum": 4.5
+    },
+    {
+      "name": "type on search",
+      "foreground": "#E2B1D6",
+      "background": "#292325",
+      "ratio": 8.4424,
+      "minimum": 4.5
+    },
+    {
+      "name": "string on search",
+      "foreground": "#B5CBAA",
+      "background": "#292325",
+      "ratio": 8.8787,
+      "minimum": 4.5
+    },
+    {
+      "name": "number on search",
+      "foreground": "#E2C291",
+      "background": "#292325",
+      "ratio": 9.0783,
+      "minimum": 4.5
+    },
+    {
+      "name": "escape on search",
+      "foreground": "#95CCC8",
+      "background": "#292325",
+      "ratio": 8.6301,
+      "minimum": 4.5
+    },
+    {
+      "name": "text on inserted",
+      "foreground": "#E6DFEC",
+      "background": "#252528",
+      "ratio": 11.7407,
+      "minimum": 4.5
+    },
+    {
+      "name": "comment on inserted",
+      "foreground": "#96889F",
+      "background": "#252528",
+      "ratio": 4.5993,
+      "minimum": 4.5
+    },
+    {
+      "name": "punctuation on inserted",
+      "foreground": "#B4A7C2",
+      "background": "#252528",
+      "ratio": 6.7304,
+      "minimum": 4.5
+    },
+    {
+      "name": "keyword on inserted",
+      "foreground": "#C99AF7",
+      "background": "#252528",
+      "ratio": 6.8772,
+      "minimum": 4.5
+    },
+    {
+      "name": "function on inserted",
+      "foreground": "#AFBEF1",
+      "background": "#252528",
+      "ratio": 8.3398,
+      "minimum": 4.5
+    },
+    {
+      "name": "type on inserted",
+      "foreground": "#E2B1D6",
+      "background": "#252528",
+      "ratio": 8.3655,
+      "minimum": 4.5
+    },
+    {
+      "name": "string on inserted",
+      "foreground": "#B5CBAA",
+      "background": "#252528",
+      "ratio": 8.7978,
+      "minimum": 4.5
+    },
+    {
+      "name": "number on inserted",
+      "foreground": "#E2C291",
+      "background": "#252528",
+      "ratio": 8.9956,
+      "minimum": 4.5
+    },
+    {
+      "name": "escape on inserted",
+      "foreground": "#95CCC8",
+      "background": "#252528",
+      "ratio": 8.5514,
+      "minimum": 4.5
+    },
+    {
+      "name": "text on removed",
+      "foreground": "#E6DFEC",
+      "background": "#2f1f27",
+      "ratio": 11.9829,
+      "minimum": 4.5
+    },
+    {
+      "name": "comment on removed",
+      "foreground": "#96889F",
+      "background": "#2f1f27",
+      "ratio": 4.6942,
+      "minimum": 4.5
+    },
+    {
+      "name": "punctuation on removed",
+      "foreground": "#B4A7C2",
+      "background": "#2f1f27",
+      "ratio": 6.8693,
+      "minimum": 4.5
+    },
+    {
+      "name": "keyword on removed",
+      "foreground": "#C99AF7",
+      "background": "#2f1f27",
+      "ratio": 7.0191,
+      "minimum": 4.5
+    },
+    {
+      "name": "function on removed",
+      "foreground": "#AFBEF1",
+      "background": "#2f1f27",
+      "ratio": 8.5119,
+      "minimum": 4.5
+    },
+    {
+      "name": "type on removed",
+      "foreground": "#E2B1D6",
+      "background": "#2f1f27",
+      "ratio": 8.5381,
+      "minimum": 4.5
+    },
+    {
+      "name": "string on removed",
+      "foreground": "#B5CBAA",
+      "background": "#2f1f27",
+      "ratio": 8.9793,
+      "minimum": 4.5
+    },
+    {
+      "name": "number on removed",
+      "foreground": "#E2C291",
+      "background": "#2f1f27",
+      "ratio": 9.1812,
+      "minimum": 4.5
+    },
+    {
+      "name": "escape on removed",
+      "foreground": "#95CCC8",
+      "background": "#2f1f27",
+      "ratio": 8.7279,
+      "minimum": 4.5
+    },
+    {
+      "name": "Primary UI text on panel",
+      "foreground": "#E6DFEC",
+      "background": "#1B1723",
+      "ratio": 13.5164,
+      "minimum": 4.5
+    },
+    {
+      "name": "Secondary UI text on panel",
+      "foreground": "#A99BB5",
+      "background": "#1B1723",
+      "ratio": 6.7392,
+      "minimum": 4.5
+    },
+    {
+      "name": "Primary UI text on elevated",
+      "foreground": "#E6DFEC",
+      "background": "#221C2C",
+      "ratio": 12.6966,
+      "minimum": 4.5
+    },
+    {
+      "name": "Secondary UI text on elevated",
+      "foreground": "#A99BB5",
+      "background": "#221C2C",
+      "ratio": 6.3305,
+      "minimum": 4.5
+    },
+    {
+      "name": "Primary UI text on hover",
+      "foreground": "#E6DFEC",
+      "background": "#2C2436",
+      "ratio": 11.4184,
+      "minimum": 4.5
+    },
+    {
+      "name": "Secondary UI text on hover",
+      "foreground": "#A99BB5",
+      "background": "#2C2436",
+      "ratio": 5.6931,
+      "minimum": 4.5
+    },
+    {
+      "name": "Primary UI text on selection",
+      "foreground": "#E6DFEC",
+      "background": "#2D203B",
+      "ratio": 11.6778,
+      "minimum": 4.5
+    },
+    {
+      "name": "Secondary UI text on selection",
+      "foreground": "#A99BB5",
+      "background": "#2D203B",
+      "ratio": 5.8225,
+      "minimum": 4.5
+    },
+    {
+      "name": "Button label",
+      "foreground": "#141119",
+      "background": "#E14C6F",
+      "ratio": 4.8621,
+      "minimum": 4.5
+    },
+    {
+      "name": "Hovered button label",
+      "foreground": "#141119",
+      "background": "#F0808C",
+      "ratio": 7.2702,
+      "minimum": 4.5
+    },
+    {
+      "name": "error diagnostic",
+      "foreground": "#F0808C",
+      "background": "#141119",
+      "ratio": 7.2702,
+      "minimum": 4.5
+    },
+    {
+      "name": "warning diagnostic",
+      "foreground": "#E2C291",
+      "background": "#141119",
+      "ratio": 10.9962,
+      "minimum": 4.5
+    },
+    {
+      "name": "info diagnostic",
+      "foreground": "#AFBEF1",
+      "background": "#141119",
+      "ratio": 10.1946,
+      "minimum": 4.5
+    },
+    {
+      "name": "success diagnostic",
+      "foreground": "#B5CBAA",
+      "background": "#141119",
+      "ratio": 10.7544,
+      "minimum": 4.5
+    },
+    {
+      "name": "hint diagnostic",
+      "foreground": "#A99BB5",
+      "background": "#141119",
+      "ratio": 7.1557,
+      "minimum": 4.5
+    },
+    {
+      "name": "ANSI red",
+      "foreground": "#E57387",
+      "background": "#141119",
+      "ratio": 6.347,
+      "minimum": 4.5
+    },
+    {
+      "name": "ANSI green",
+      "foreground": "#A6C494",
+      "background": "#141119",
+      "ratio": 9.7379,
+      "minimum": 4.5
+    },
+    {
+      "name": "ANSI yellow",
+      "foreground": "#D9B87F",
+      "background": "#141119",
+      "ratio": 9.8873,
+      "minimum": 4.5
+    },
+    {
+      "name": "ANSI blue",
+      "foreground": "#9BABDF",
+      "background": "#141119",
+      "ratio": 8.2604,
+      "minimum": 4.5
+    },
+    {
+      "name": "ANSI magenta",
+      "foreground": "#BD90E5",
+      "background": "#141119",
+      "ratio": 7.3708,
+      "minimum": 4.5
+    },
+    {
+      "name": "ANSI cyan",
+      "foreground": "#8DBFBC",
+      "background": "#141119",
+      "ratio": 9.1738,
+      "minimum": 4.5
+    },
+    {
+      "name": "ANSI white",
+      "foreground": "#D7CFDF",
+      "background": "#141119",
+      "ratio": 12.3493,
+      "minimum": 4.5
+    },
+    {
+      "name": "ANSI brightBlack",
+      "foreground": "#96889F",
+      "background": "#141119",
+      "ratio": 5.6222,
+      "minimum": 4.5
+    },
+    {
+      "name": "ANSI brightRed",
+      "foreground": "#F28D9C",
+      "background": "#141119",
+      "ratio": 8.0656,
+      "minimum": 4.5
+    },
+    {
+      "name": "ANSI brightGreen",
+      "foreground": "#BBD8AA",
+      "background": "#141119",
+      "ratio": 12.0251,
+      "minimum": 4.5
+    },
+    {
+      "name": "ANSI brightYellow",
+      "foreground": "#EAD09F",
+      "background": "#141119",
+      "ratio": 12.4751,
+      "minimum": 4.5
+    },
+    {
+      "name": "ANSI brightBlue",
+      "foreground": "#BAC9FF",
+      "background": "#141119",
+      "ratio": 11.4652,
+      "minimum": 4.5
+    },
+    {
+      "name": "ANSI brightMagenta",
+      "foreground": "#D6ACFF",
+      "background": "#141119",
+      "ratio": 9.9685,
+      "minimum": 4.5
+    },
+    {
+      "name": "ANSI brightCyan",
+      "foreground": "#ADE0DC",
+      "background": "#141119",
+      "ratio": 12.8764,
+      "minimum": 4.5
+    },
+    {
+      "name": "ANSI brightWhite",
+      "foreground": "#F2ECF7",
+      "background": "#141119",
+      "ratio": 16.1186,
+      "minimum": 4.5
+    }
+  ],
+  "limits": [
+    "No live VS Code session or language-server integration was run.",
+    "TextMate grammars are supplied by the pinned Shiki dependency; installed VS Code extensions may use different grammars.",
+    "Overlapping selection, search and diff decorations still need visual evaluation in the editor.",
+    "ANSI black is deliberately exempt from the normal-text contrast threshold."
+  ]
+}

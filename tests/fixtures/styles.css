@@ -1,0 +1,17 @@
+/* Seletores, propriedades, valores, unidades e funções. */
+:root {
+  --background: #141119;
+  --accent: #e14c6f;
+}
+
+.theme-card:hover {
+  color: var(--accent);
+  background: var(--background);
+  padding: 16px;
+  border: 1px solid currentColor;
+  display: grid;
+}
+
+@media (max-width: 640px) {
+  .theme-card { padding: 12px; }
+}

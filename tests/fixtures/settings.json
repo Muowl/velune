@@ -1,0 +1,9 @@
+{
+  "name": "Velune",
+  "dark": true,
+  "version": 1,
+  "opacity": 0.8,
+  "background": "#141119",
+  "platforms": ["vscode"],
+  "optional": null
+}

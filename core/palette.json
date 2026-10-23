@@ -1,0 +1,62 @@
+{
+  "name": "Velune",
+  "variant": "Dark",
+  "version": 1,
+  "background": {
+    "editor": "#141119",
+    "panel": "#1B1723",
+    "deep": "#100E14",
+    "elevated": "#221C2C",
+    "hover": "#2C2436",
+    "selection": "#2D203B",
+    "line": "#1C1724"
+  },
+  "border": {
+    "subtle": "#332B40",
+    "strong": "#625170"
+  },
+  "text": {
+    "primary": "#E6DFEC",
+    "secondary": "#A99BB5",
+    "comment": "#96889F",
+    "punctuation": "#B4A7C2",
+    "disabled": "#766981",
+    "onAccent": "#141119"
+  },
+  "brand": {
+    "accent": "#E14C6F"
+  },
+  "syntax": {
+    "keyword": "#C99AF7",
+    "function": "#AFBEF1",
+    "type": "#E2B1D6",
+    "string": "#B5CBAA",
+    "number": "#E2C291",
+    "escape": "#95CCC8"
+  },
+  "state": {
+    "error": "#F0808C",
+    "warning": "#E2C291",
+    "info": "#AFBEF1",
+    "success": "#B5CBAA",
+    "hint": "#A99BB5"
+  },
+  "terminal": {
+    "black": "#302838",
+    "red": "#E57387",
+    "green": "#A6C494",
+    "yellow": "#D9B87F",
+    "blue": "#9BABDF",
+    "magenta": "#BD90E5",
+    "cyan": "#8DBFBC",
+    "white": "#D7CFDF",
+    "brightBlack": "#96889F",
+    "brightRed": "#F28D9C",
+    "brightGreen": "#BBD8AA",
+    "brightYellow": "#EAD09F",
+    "brightBlue": "#BAC9FF",
+    "brightMagenta": "#D6ACFF",
+    "brightCyan": "#ADE0DC",
+    "brightWhite": "#F2ECF7"
+  }
+}
