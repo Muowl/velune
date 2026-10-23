@@ -16,7 +16,7 @@ O mesmo VSIX pode ser enviado ao VS Code Marketplace e ao Open VSX. O workflow V
 - O tema usa apenas cores e estilos, com 12 gramáticas verificadas e contratos semânticos estáticos de cinco fornecedores. Os resultados exatos estão em [validation.json](validation.json).
 - O VSIX inclui o tema, o ícone, o manifesto, o README, o changelog e a licença. Compiladores, exemplos, scripts e dependências de desenvolvimento não fazem parte do pacote.
 - `publisher` está definido como `muowl`, igual ao identificador usado no projeto VesperVeil. O envio exige acesso ao publisher/namespace em cada catálogo.
-- A licença permanece `UNLICENSED`, com direitos reservados no arquivo `LICENSE`. Uma licença de reutilização ainda não foi escolhida. Se a intenção for distribuir o projeto como open source, defina essa licença e atualize `LICENSE`, `package.json` e README antes de gerar o pacote de publicação. O VesperVeil usa MIT; isso não foi aplicado automaticamente ao Velune.
+- A licença MIT foi adotada. O texto completo está em `LICENSE`, e o manifesto e o lockfile usam o identificador `MIT`.
 - Ainda falta uma sessão de avaliação dentro do VS Code ou Cursor com os servidores de linguagem ativos. As prévias Shiki e os contratos estáticos não substituem esse teste. Use o [roteiro](TESTE-NO-VSCODE.md), especialmente comentários, seleção, busca, diffs e a interface de IA do Cursor.
 
 ## Enviar o VSIX

@@ -54,7 +54,7 @@ A extensão foi empacotada e validada automaticamente, mas ainda precisa de uma 
 
 As verificações de contraste cobrem texto e sintaxe no editor, seleção, linha atual, busca, referências e fundos de diferenças do Git, além de pares da interface e do terminal. Decorações sobrepostas e estados adicionais exigem revisão visual. O preto ANSI é uma cor de base deliberadamente escura e não satisfaz o limiar adotado para texto normal. Esses testes não constituem uma certificação de acessibilidade.
 
-O [guia de publicação](docs/PUBLICACAO.md) registra o pacote, os comandos de envio e as pendências de licença e avaliação manual.
+O [guia de publicação](docs/PUBLICACAO.md) registra o pacote, os comandos de envio e a avaliação manual pendente.
 
 ## Desenvolvimento
 
@@ -98,4 +98,4 @@ Novas plataformas deverão consumir os papéis centrais por adaptadores próprio
 - https://code.visualstudio.com/api/references/theme-color
 - https://code.visualstudio.com/api/working-with-extensions/publishing-extension
 
-Projeto independente inspirado nas referências visuais fornecidas. As artes da personagem não são distribuídas no pacote. O código está disponível para avaliação, com direitos reservados; uma licença de reutilização ainda será escolhida. Esta versão está marcada como `UNLICENSED`.
+Projeto independente inspirado nas referências visuais fornecidas. As artes da personagem não são distribuídas no pacote. O projeto é distribuído sob a [licença MIT](LICENSE).

@@ -2,6 +2,7 @@
 
 ## 0.1.3 — 2026-10-23
 
+- Licença MIT adotada no código, na documentação e no pacote da extensão.
 - Validação de Rust e Java com 86 verificações específicas de sintaxe, somando 12 gramáticas na suíte.
 - Java: cores de referências a tipos, genéricos, arrays, anotações, lambdas, wildcard e Javadoc corrigidas.
 - Rust: atributos, caracteres e variáveis capturadas em strings de formato ajustados.
