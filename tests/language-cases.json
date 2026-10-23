@@ -1,0 +1,286 @@
+{
+  "csharp": [
+    [
+      "namespace Velune",
+      "namespace",
+      "syntax.keyword"
+    ],
+    [
+      "namespace Velune",
+      "Velune",
+      "syntax.type"
+    ],
+    [
+      "record struct Accent",
+      "Accent",
+      "syntax.type"
+    ],
+    [
+      "record Theme",
+      "Theme",
+      "syntax.type"
+    ],
+    [
+      "delegate string ThemeFormatter",
+      "ThemeFormatter",
+      "syntax.type"
+    ],
+    [
+      "interface IThemeStore<T>",
+      "IThemeStore",
+      "syntax.type"
+    ],
+    [
+      "interface IThemeStore<T>",
+      "T>",
+      "syntax.type"
+    ],
+    [
+      "class ThemeService",
+      "ThemeService",
+      "syntax.type"
+    ],
+    [
+      "[Obsolete(",
+      "Obsolete",
+      "syntax.type"
+    ],
+    [
+      "Describe() =>",
+      "Describe",
+      "syntax.function"
+    ],
+    [
+      "LoadAsync(CancellationToken",
+      "LoadAsync",
+      "syntax.function"
+    ],
+    [
+      "await store.FindAsync",
+      "await",
+      "syntax.keyword"
+    ],
+    [
+      "await store.FindAsync",
+      "FindAsync",
+      "syntax.function"
+    ],
+    [
+      "RetryLimit = 3",
+      "RetryLimit",
+      "text.primary"
+    ],
+    [
+      "RetryLimit = 3",
+      "3",
+      "syntax.number"
+    ],
+    [
+      "theme.Name;",
+      "Name",
+      "text.primary"
+    ],
+    [
+      "theme => theme.Name",
+      "=>",
+      "text.punctuation"
+    ],
+    [
+      "\"Velune\"",
+      "Velune",
+      "syntax.string"
+    ],
+    [
+      "@\"C:\\Themes",
+      "Themes",
+      "syntax.string"
+    ],
+    [
+      "\"\"\"{\"theme\"",
+      "theme",
+      "syntax.string"
+    ],
+    [
+      "$\"Theme: {Name}",
+      "{",
+      "syntax.escape"
+    ],
+    [
+      "$\"Theme: {Name}",
+      "Name",
+      "text.primary"
+    ],
+    [
+      "\\n\";",
+      "\\n",
+      "syntax.escape"
+    ],
+    [
+      "/// <summary>",
+      "summary",
+      "text.comment"
+    ],
+    [
+      "/// <summary>",
+      "<",
+      "text.comment"
+    ],
+    [
+      "// Comments",
+      "Comments",
+      "text.comment"
+    ],
+    [
+      "#if DEBUG",
+      "if",
+      "syntax.keyword"
+    ],
+    [
+      "return null",
+      "null",
+      "syntax.number"
+    ]
+  ],
+  "cpp": [
+    [
+      "#include <concepts>",
+      "include",
+      "syntax.keyword"
+    ],
+    [
+      "#include <concepts>",
+      "concepts",
+      "syntax.string"
+    ],
+    [
+      "#define VELUNE_VERSION",
+      "VELUNE_VERSION",
+      "syntax.function"
+    ],
+    [
+      "namespace velune",
+      "velune",
+      "syntax.type"
+    ],
+    [
+      "enum class ThemeMode",
+      "ThemeMode",
+      "syntax.type"
+    ],
+    [
+      "{ Dark, System }",
+      "Dark",
+      "syntax.number"
+    ],
+    [
+      "struct Accent",
+      "Accent",
+      "syntax.type"
+    ],
+    [
+      "template <typename T>",
+      "template",
+      "syntax.keyword"
+    ],
+    [
+      "template <typename T>",
+      "T>",
+      "syntax.type"
+    ],
+    [
+      "concept Named",
+      "concept",
+      "syntax.keyword"
+    ],
+    [
+      "requires(const T&",
+      "requires",
+      "syntax.keyword"
+    ],
+    [
+      "class Theme final",
+      "Theme",
+      "syntax.type"
+    ],
+    [
+      "explicit Theme(",
+      "Theme",
+      "syntax.function"
+    ],
+    [
+      "[[nodiscard]]",
+      "nodiscard",
+      "syntax.type"
+    ],
+    [
+      "name() const",
+      "name",
+      "syntax.function"
+    ],
+    [
+      "static constexpr int",
+      "constexpr",
+      "syntax.keyword"
+    ],
+    [
+      "static constexpr int",
+      "int",
+      "syntax.type"
+    ],
+    [
+      "describe(const T&",
+      "describe",
+      "syntax.function"
+    ],
+    [
+      "describe(const T&",
+      "&",
+      "text.punctuation"
+    ],
+    [
+      "using ThemePtr",
+      "ThemePtr",
+      "syntax.type"
+    ],
+    [
+      "accent{225",
+      "225",
+      "syntax.number"
+    ],
+    [
+      "R\"json({\"theme\"",
+      "theme",
+      "syntax.string"
+    ],
+    [
+      "\"\\n\"",
+      "\\n",
+      "syntax.escape"
+    ],
+    [
+      "-> int { return",
+      "int",
+      "syntax.type"
+    ],
+    [
+      "theme->mode",
+      "mode",
+      "text.primary"
+    ],
+    [
+      "static_cast<int>",
+      "static_cast",
+      "syntax.keyword"
+    ],
+    [
+      "static_cast<int>",
+      "int",
+      "syntax.type"
+    ],
+    [
+      "// Comments",
+      "Comments",
+      "text.comment"
+    ]
+  ]
+}

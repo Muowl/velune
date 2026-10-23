@@ -1,11 +1,11 @@
-# Avaliação no VS Code
+# Avaliação no VS Code e Cursor
 
 Instale o VSIX e selecione Velune Dark. Use primeiro a fonte e o tamanho com que você costuma programar. Abra os arquivos de `tests/fixtures` ou um projeto real.
 
 ## O que observar
 
 1. **Leitura contínua:** trabalhe em um arquivo habitual e observe se comentários, pontuação ou cores específicas chamam atenção demais ou ficam difíceis de ler.
-2. **Sintaxe:** confira TypeScript e TSX, depois HTML/CSS, JSON e Python. Funções devem usar azul, tipos rosa, palavras-chave lavanda, strings verde e números âmbar. Variáveis comuns ficam neutras.
+2. **Sintaxe:** confira TypeScript e TSX, C# e C++, depois HTML/CSS, JSON e Python. Use também o [roteiro de compatibilidade](COMPATIBILIDADE.md). Funções devem usar azul, tipos rosa, palavras-chave lavanda, strings verde e números âmbar. Variáveis comuns ficam neutras.
 3. **Tokens semânticos:** compare temporariamente `editor.semanticHighlighting.enabled` ligado e desligado, de preferência nas configurações do workspace. Reponha o valor anterior ao terminar. A classificação pode ficar mais precisa quando o servidor de linguagem está ativo, mas as mesmas categorias devem manter suas cores.
 4. **Seleção e busca:** selecione comentários e código colorido; pesquise um termo repetido; compare a ocorrência atual com as demais. Verifique também combinações de seleção e busca.
 5. **Git:** examine um diff real, com linhas adicionadas e removidas. Os fundos são discretos para manter a leitura; os marcadores laterais reforçam o significado.
@@ -23,4 +23,4 @@ O resultado detalhado está em `validation.json`, gerado por `npm test`. Ele inc
 
 ## O que falta antes de publicar
 
-Avaliação dentro do VS Code, ajustes a partir do uso, revisão do símbolo, confirmação do identificador de publicação, escolha da licença de reutilização e preparação das imagens de apresentação. O código está em https://github.com/Muowl/velune; o protótipo não foi publicado em nenhum marketplace.
+Avaliação dentro do VS Code e do Cursor, ajustes a partir do uso, revisão do símbolo, confirmação do identificador de publicação, escolha da licença de reutilização e preparação das imagens de apresentação. O código está em https://github.com/Muowl/velune; o protótipo não foi publicado em nenhum marketplace.

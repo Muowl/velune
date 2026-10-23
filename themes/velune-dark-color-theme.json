@@ -605,6 +605,66 @@
       }
     },
     {
+      "name": "C++ reference and pointer declarators",
+      "scope": [
+        "storage.modifier.reference.cpp",
+        "storage.modifier.pointer.cpp"
+      ],
+      "settings": {
+        "foreground": "#B4A7C2",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "C++ lambda return types",
+      "scope": [
+        "storage.type.return-type.lambda.cpp"
+      ],
+      "settings": {
+        "foreground": "#E2B1D6",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "C++ attributes",
+      "scope": [
+        "support.other.attribute.cpp entity.other.attribute"
+      ],
+      "settings": {
+        "foreground": "#E2B1D6",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "C++ named casts",
+      "scope": [
+        "keyword.operator.cast.cpp",
+        "keyword.operator.cast.static_cast.cpp",
+        "keyword.operator.cast.dynamic_cast.cpp",
+        "keyword.operator.cast.const_cast.cpp",
+        "keyword.operator.cast.reinterpret_cast.cpp"
+      ],
+      "settings": {
+        "foreground": "#C99AF7",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "C# XML documentation",
+      "scope": [
+        "comment.block.documentation.cs",
+        "comment.block.documentation.cs entity.name.tag",
+        "comment.block.documentation.cs entity.other.attribute-name",
+        "comment.block.documentation.cs punctuation.definition.tag",
+        "comment.block.documentation.cs punctuation.definition.string",
+        "comment.block.documentation.cs string"
+      ],
+      "settings": {
+        "foreground": "#96889F",
+        "fontStyle": ""
+      }
+    },
+    {
       "name": "Markdown headings",
       "scope": [
         "markup.heading",
@@ -887,6 +947,186 @@
     },
     "*.deprecated": {
       "strikethrough": true
+    },
+    "recordClass:csharp": {
+      "foreground": "#E2B1D6",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "recordStruct:csharp": {
+      "foreground": "#E2B1D6",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "delegate:csharp": {
+      "foreground": "#E2B1D6",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "module:csharp": {
+      "foreground": "#E2B1D6",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "field:csharp": {
+      "foreground": "#E6DFEC",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "constant:csharp": {
+      "foreground": "#E6DFEC",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "extensionMethod:csharp": {
+      "foreground": "#AFBEF1",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "controlKeyword:csharp": {
+      "foreground": "#C99AF7",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "stringVerbatim:csharp": {
+      "foreground": "#B5CBAA",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "stringEscapeCharacter:csharp": {
+      "foreground": "#95CCC8",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "operatorOverloaded:csharp": {
+      "foreground": "#B4A7C2",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "punctuation:csharp": {
+      "foreground": "#B4A7C2",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "preprocessorText:csharp": {
+      "foreground": "#E6DFEC",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "excludedCode:csharp": {
+      "foreground": "#96889F",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "decorator:csharp": {
+      "foreground": "#E2B1D6",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "xmlDocCommentAttributeName:csharp": {
+      "foreground": "#96889F",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "xmlDocCommentAttributeQuotes:csharp": {
+      "foreground": "#96889F",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "xmlDocCommentAttributeValue:csharp": {
+      "foreground": "#96889F",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "xmlDocCommentCDataSection:csharp": {
+      "foreground": "#96889F",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "xmlDocCommentComment:csharp": {
+      "foreground": "#96889F",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "xmlDocCommentDelimiter:csharp": {
+      "foreground": "#96889F",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "xmlDocCommentEntityReference:csharp": {
+      "foreground": "#96889F",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "xmlDocCommentName:csharp": {
+      "foreground": "#96889F",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "xmlDocCommentProcessingInstruction:csharp": {
+      "foreground": "#96889F",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "xmlDocCommentText:csharp": {
+      "foreground": "#96889F",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "concept:cpp": {
+      "foreground": "#E2B1D6",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "modifier:cpp": {
+      "foreground": "#C99AF7",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "bracket:cpp": {
+      "foreground": "#B4A7C2",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "unknown:cpp": {
+      "foreground": "#E6DFEC",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "*.constructorOrDestructor:cpp": {
+      "foreground": "#AFBEF1",
+      "bold": false,
+      "italic": false,
+      "underline": false
     }
   }
 }

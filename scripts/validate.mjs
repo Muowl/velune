@@ -64,6 +64,7 @@ for (const [token, color] of Object.entries(mapping)) check(`Semantic mapping: $
 
 const fixtures = [
   ['typescript', 'theme.ts'], ['javascript', 'example.js'], ['tsx', 'component.tsx'],
+  ['csharp', 'theme.cs'], ['cpp', 'theme.cpp'],
   ['html', 'index.html'], ['css', 'styles.css'], ['json', 'settings.json'], ['python', 'theme.py'], ['markdown', 'readme.md']
 ];
 const highlighter = await createHighlighter({ themes: [{ ...theme, name: 'velune' }], langs: fixtures.map(([lang]) => lang) });
@@ -105,10 +106,52 @@ tokenAt('json', '"Velune"', 2, palette.syntax.string);
 tokenAt('python', 'def alpha', 4, palette.syntax.function);
 tokenAt('python', 'class Theme', 6, palette.syntax.type);
 tokenAt('python', '# Comentários', 4, palette.text.comment);
+// Real grammar regressions: specific symbols, not just the number of colors.
+const languageCases = JSON.parse(await readFile(path.join(root, 'tests/language-cases.json'), 'utf8'));
+const paletteColor = colorRole => colorRole.split('.').reduce((object, key) => object[key], palette);
+for (const [language, cases] of Object.entries(languageCases)) {
+  for (const [anchor, symbol, colorRole] of cases) {
+    const offset = anchor.indexOf(symbol);
+    assert.ok(offset >= 0, `Missing symbol ${symbol} in ${anchor}`);
+    tokenAt(language, anchor, offset, paletteColor(colorRole));
+  }
+}
+
+// Static contracts from upstream declarations, not an LSP integration test or
+// an implementation of the editor's complete semantic-style resolver.
+const providers = JSON.parse(await readFile(path.join(root, 'tests/semantic-providers.json'), 'utf8')).providers;
+const providerCases = {
+  csharp: {
+    recordClass: 'syntax.type', recordStruct: 'syntax.type', delegate: 'syntax.type',
+    field: 'text.primary', constant: 'text.primary', extensionMethod: 'syntax.function',
+    controlKeyword: 'syntax.keyword', stringVerbatim: 'syntax.string', stringEscapeCharacter: 'syntax.escape',
+    operatorOverloaded: 'text.punctuation', punctuation: 'text.punctuation', excludedCode: 'text.comment',
+    ...Object.fromEntries(providers.find(p => p.id === 'csharp').types.filter(t => t.id.startsWith('xmlDocComment')).map(t => [t.id, 'text.comment']))
+  },
+  cpptools: {
+    templateType: 'syntax.type', templateFunction: 'syntax.function', referenceType: 'syntax.type',
+    genericType: 'syntax.type', valueType: 'syntax.type', cliProperty: 'text.primary',
+    operatorOverload: 'text.punctuation', memberOperatorOverload: 'text.punctuation',
+    newOperator: 'text.punctuation', customLiteral: 'syntax.number', numberLiteral: 'syntax.number', stringLiteral: 'syntax.string'
+  },
+  clangd: { concept: 'syntax.type', modifier: 'syntax.keyword', bracket: 'text.punctuation', unknown: 'text.primary', typeParameter: 'syntax.type', macro: 'syntax.function', enumMember: 'syntax.number', property: 'text.primary' }
+};
+for (const provider of providers) {
+  for (const [token, colorRole] of Object.entries(providerCases[provider.id])) {
+    const declaration = provider.types.find(t => t.id === token);
+    assert.ok(declaration, `Unknown ${provider.id} token: ${token}`);
+    const style = theme.semanticTokenColors[`${token}:${provider.language}`] ?? theme.semanticTokenColors[token] ?? theme.semanticTokenColors[declaration.superType];
+    check(`${provider.id} static contract: ${token}`, style?.foreground === paletteColor(colorRole) && style.italic === false && style.bold === false);
+  }
+}
+check('clangd constructors retain the callable color', theme.semanticTokenColors['*.constructorOrDestructor:cpp'].foreground === palette.syntax.function);
+check('Deprecated symbols retain strikethrough', theme.semanticTokenColors['*.deprecated'].strikethrough === true);
 highlighter.dispose();
 await mkdir(path.join(root, 'dist'), { recursive: true });
 await mkdir(path.join(root, 'docs'), { recursive: true });
-const report = { version: manifest.version, checks: checks.length, languages: fixtures.map(([lang]) => lang), contrasts, limits: ['No live VS Code session or language-server integration was run.', 'TextMate grammars are supplied by the pinned Shiki dependency; installed VS Code extensions may use different grammars.', 'Overlapping selection, search and diff decorations still need visual evaluation in the editor.', 'ANSI black is deliberately exempt from the normal-text contrast threshold.'] };
+const report = { version: manifest.version, checks: checks.length, languages: fixtures.map(([lang]) => lang), contrasts, semanticContracts: { kind: 'static declarations, not live LSP output', providers: providers.map(provider => provider.id), cases: Object.values(providerCases).reduce((sum, cases) => sum + Object.keys(cases).length, 0) }, limits: ['No live VS Code, Cursor session or language-server integration was run.', 'TextMate grammars are supplied by the pinned Shiki dependency; installed VS Code extensions may use different grammars.', 'Overlapping selection, search and diff decorations still need visual evaluation in the editor.', 'ANSI black is deliberately exempt from the normal-text contrast threshold.'] };
 await writeFile(path.join(root, 'docs/validation.json'), JSON.stringify(report, null, 2) + '\n');
-await writeFile(path.join(root, 'dist/token-preview.html'), `<!doctype html><html lang="pt-BR"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Velune — gramáticas reais</title><style>body{margin:0;background:${palette.background.editor};color:${palette.text.primary};font:15px/1.6 system-ui}main{max-width:1040px;margin:auto;padding:24px}h1,h2{font-weight:500}h2{font-size:16px;color:${palette.text.secondary}}section{margin:28px 0}pre{padding:20px;border:1px solid ${palette.border.subtle};border-radius:8px;overflow:auto;font:14px/1.7 Consolas,monospace}header{border-bottom:2px solid ${palette.brand.accent};padding-bottom:12px}</style><main><header><h1>Velune Dark</h1><p>Prévia TextMate gerada com Shiki; não é uma captura do VS Code.</p></header>${rendered.join('')}</main></html>`);
+const preview = `<!doctype html><html lang="pt-BR"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Velune — gramáticas reais</title><style>body{margin:0;background:${palette.background.editor};color:${palette.text.primary};font:15px/1.6 system-ui}main{max-width:1040px;margin:auto;padding:24px}h1,h2{font-weight:500}h2{font-size:16px;color:${palette.text.secondary}}section{margin:28px 0}pre{padding:20px;border:1px solid ${palette.border.subtle};border-radius:8px;overflow:auto;font:14px/1.7 Consolas,monospace}header{border-bottom:2px solid ${palette.brand.accent};padding-bottom:12px}</style><main><header><h1>Velune Dark</h1><p>Prévia TextMate gerada com Shiki; não é uma captura do VS Code.</p></header>${rendered.join('')}</main></html>`;
+await writeFile(path.join(root, 'dist/token-preview.html'), preview);
+await writeFile(path.join(root, 'docs/token-preview.html'), preview);
 console.log(`Passed ${checks.length} checks; ${contrasts.length} contrast pairs; ${fixtures.length} real TextMate grammars.`);

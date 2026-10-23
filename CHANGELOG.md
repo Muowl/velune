@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.1 — 2026-10-23
+
+- Validação de C# e C++ com exemplos, 56 verificações específicas de sintaxe e contratos semânticos baseados nos fornecedores C#, C/C++ e clangd.
+- Correção das cores de delegates, escapes semânticos e comentários XML de C#.
+- Regras para referências, ponteiros, atributos, casts e tipos de retorno de lambdas de C++.
+- Regras semânticas específicas de clangd para conceitos, modificadores e construtores/destrutores.
+- Guia de instalação e avaliação no Cursor, com limites dos testes documentados.
+- Prévia versionada regenerada e conferida pelo CI junto com o tema.
+
 ## 0.1.0 — 2026-10-23
 
 - Primeira versão local do Velune Dark, com a paleta mais viva aprovada.

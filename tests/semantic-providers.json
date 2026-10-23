@@ -1,0 +1,327 @@
+{
+  "retrieved": "2026-10-23",
+  "note": "Declaration snapshots for static theme contract checks, not captured output from a running language server.",
+  "providers": [
+    {
+      "id": "csharp",
+      "language": "csharp",
+      "source": "https://github.com/dotnet/vscode-csharp/blob/main/package.json",
+      "blobSha": "d81f350a5c033011f67ae73668716e8ee09105a7",
+      "types": [
+        {
+          "id": "excludedCode"
+        },
+        {
+          "id": "controlKeyword",
+          "superType": "keyword"
+        },
+        {
+          "id": "operatorOverloaded"
+        },
+        {
+          "id": "whitespace"
+        },
+        {
+          "id": "text"
+        },
+        {
+          "id": "preprocessorText"
+        },
+        {
+          "id": "punctuation"
+        },
+        {
+          "id": "stringVerbatim",
+          "superType": "string"
+        },
+        {
+          "id": "stringEscapeCharacter",
+          "superType": "string"
+        },
+        {
+          "id": "recordClass",
+          "superType": "class"
+        },
+        {
+          "id": "delegate",
+          "superType": "method"
+        },
+        {
+          "id": "module",
+          "superType": "namespace"
+        },
+        {
+          "id": "recordStruct",
+          "superType": "struct"
+        },
+        {
+          "id": "field",
+          "superType": "property"
+        },
+        {
+          "id": "constant",
+          "superType": "variable"
+        },
+        {
+          "id": "extensionMethod",
+          "superType": "method"
+        },
+        {
+          "id": "xmlDocCommentAttributeName"
+        },
+        {
+          "id": "xmlDocCommentAttributeQuotes"
+        },
+        {
+          "id": "xmlDocCommentAttributeValue"
+        },
+        {
+          "id": "xmlDocCommentCDataSection"
+        },
+        {
+          "id": "xmlDocCommentComment"
+        },
+        {
+          "id": "xmlDocCommentDelimiter"
+        },
+        {
+          "id": "xmlDocCommentEntityReference"
+        },
+        {
+          "id": "xmlDocCommentName"
+        },
+        {
+          "id": "xmlDocCommentProcessingInstruction"
+        },
+        {
+          "id": "xmlDocCommentText"
+        },
+        {
+          "id": "xmlLiteralAttributeName"
+        },
+        {
+          "id": "xmlLiteralAttributeQuotes"
+        },
+        {
+          "id": "xmlLiteralAttributeValue"
+        },
+        {
+          "id": "xmlLiteralCDataSection"
+        },
+        {
+          "id": "xmlLiteralComment"
+        },
+        {
+          "id": "xmlLiteralDelimiter"
+        },
+        {
+          "id": "xmlLiteralEmbeddedExpression"
+        },
+        {
+          "id": "xmlLiteralEntityReference"
+        },
+        {
+          "id": "xmlLiteralName"
+        },
+        {
+          "id": "xmlLiteralProcessingInstruction"
+        },
+        {
+          "id": "xmlLiteralText"
+        },
+        {
+          "id": "regexComment"
+        },
+        {
+          "id": "regexCharacterClass"
+        },
+        {
+          "id": "regexAnchor"
+        },
+        {
+          "id": "regexQuantifier"
+        },
+        {
+          "id": "regexGrouping"
+        },
+        {
+          "id": "regexAlternation"
+        },
+        {
+          "id": "regexText"
+        },
+        {
+          "id": "regexSelfEscapedCharacter"
+        },
+        {
+          "id": "regexOtherEscape"
+        },
+        {
+          "id": "jsonComment"
+        },
+        {
+          "id": "jsonNumber"
+        },
+        {
+          "id": "jsonString"
+        },
+        {
+          "id": "jsonKeyword"
+        },
+        {
+          "id": "jsonText"
+        },
+        {
+          "id": "jsonOperator"
+        },
+        {
+          "id": "jsonPunctuation"
+        },
+        {
+          "id": "jsonArray"
+        },
+        {
+          "id": "jsonObject"
+        },
+        {
+          "id": "jsonPropertyName"
+        },
+        {
+          "id": "jsonConstructorName"
+        }
+      ]
+    },
+    {
+      "id": "cpptools",
+      "language": "cpp",
+      "source": "https://github.com/microsoft/vscode-cpptools/blob/main/Extension/package.json",
+      "blobSha": "3f92b7240a72fcbf04da53572a222ebef837fbd9",
+      "types": [
+        {
+          "id": "referenceType",
+          "superType": "class"
+        },
+        {
+          "id": "cliProperty",
+          "superType": "property"
+        },
+        {
+          "id": "genericType",
+          "superType": "class"
+        },
+        {
+          "id": "valueType",
+          "superType": "class"
+        },
+        {
+          "id": "templateFunction",
+          "superType": "function"
+        },
+        {
+          "id": "templateType",
+          "superType": "class"
+        },
+        {
+          "id": "operatorOverload",
+          "superType": "operator"
+        },
+        {
+          "id": "memberOperatorOverload",
+          "superType": "operator"
+        },
+        {
+          "id": "newOperator",
+          "superType": "operator"
+        },
+        {
+          "id": "customLiteral",
+          "superType": "number"
+        },
+        {
+          "id": "numberLiteral",
+          "superType": "number"
+        },
+        {
+          "id": "stringLiteral",
+          "superType": "string"
+        }
+      ]
+    },
+    {
+      "id": "clangd",
+      "language": "cpp",
+      "source": "https://github.com/llvm/llvm-project/blob/main/clang-tools-extra/clangd/SemanticHighlighting.cpp",
+      "blobSha": "8948f1476e10829e8f656095991e150233718f04",
+      "types": [
+        {
+          "id": "variable"
+        },
+        {
+          "id": "parameter"
+        },
+        {
+          "id": "function"
+        },
+        {
+          "id": "method"
+        },
+        {
+          "id": "property"
+        },
+        {
+          "id": "class"
+        },
+        {
+          "id": "interface"
+        },
+        {
+          "id": "enum"
+        },
+        {
+          "id": "enumMember"
+        },
+        {
+          "id": "type"
+        },
+        {
+          "id": "unknown"
+        },
+        {
+          "id": "namespace"
+        },
+        {
+          "id": "typeParameter"
+        },
+        {
+          "id": "concept"
+        },
+        {
+          "id": "macro"
+        },
+        {
+          "id": "modifier"
+        },
+        {
+          "id": "operator"
+        },
+        {
+          "id": "bracket"
+        },
+        {
+          "id": "label"
+        },
+        {
+          "id": "comment"
+        }
+      ],
+      "modifiers": [
+        "constructorOrDestructor",
+        "readonly",
+        "static",
+        "deprecated",
+        "defaultLibrary",
+        "dependentName"
+      ]
+    }
+  ]
+}

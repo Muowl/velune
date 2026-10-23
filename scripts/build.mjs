@@ -117,6 +117,12 @@ export function createTheme() {
   syntax('CSS values and units', ['support.constant.property-value.css', 'support.constant.color.w3c-standard-color-name.css', 'keyword.other.unit'], number);
   syntax('JSON property names', ['support.type.property-name.json', 'string.json support.type.property-name.json'], type);
   syntax('JSON property punctuation', ['punctuation.support.type.property-name.json'], punct);
+  syntax('C++ reference and pointer declarators', ['storage.modifier.reference.cpp', 'storage.modifier.pointer.cpp'], punct);
+  syntax('C++ lambda return types', ['storage.type.return-type.lambda.cpp'], type);
+  syntax('C++ attributes', ['support.other.attribute.cpp entity.other.attribute'], type);
+  syntax('C++ named casts', ['keyword.operator.cast.cpp', 'keyword.operator.cast.static_cast.cpp', 'keyword.operator.cast.dynamic_cast.cpp', 'keyword.operator.cast.const_cast.cpp', 'keyword.operator.cast.reinterpret_cast.cpp'], kw);
+  // Keep XML documentation quiet, including nested tag and attribute scopes.
+  syntax('C# XML documentation', ['comment.block.documentation.cs', 'comment.block.documentation.cs entity.name.tag', 'comment.block.documentation.cs entity.other.attribute-name', 'comment.block.documentation.cs punctuation.definition.tag', 'comment.block.documentation.cs punctuation.definition.string', 'comment.block.documentation.cs string'], comment);
   syntax('Markdown headings', ['markup.heading', 'entity.name.section.markdown'], kw);
   syntax('Markdown inline code', ['markup.inline.raw', 'markup.fenced_code.block.markdown'], string);
   syntax('Markdown links', ['markup.underline.link', 'string.other.link'], fn);
@@ -137,6 +143,23 @@ export function createTheme() {
     'type.defaultLibrary': plain(type), 'function.defaultLibrary': plain(fn), 'method.defaultLibrary': plain(fn),
     '*.deprecated': { strikethrough: true }
   };
+  // Provider-specific types are language-scoped: do not recolor other languages.
+  // See tests/semantic-providers.json for the upstream declarations and supertypes.
+  const csharp = {
+    recordClass: type, recordStruct: type, delegate: type, module: type,
+    field: fg, constant: fg, extensionMethod: fn, controlKeyword: kw,
+    stringVerbatim: string, stringEscapeCharacter: cyan, operatorOverloaded: punct,
+    punctuation: punct, preprocessorText: fg, excludedCode: comment,
+    decorator: type
+  };
+  for (const [token, color] of Object.entries(csharp)) semanticTokenColors[`${token}:csharp`] = plain(color);
+  for (const suffix of ['AttributeName', 'AttributeQuotes', 'AttributeValue', 'CDataSection', 'Comment', 'Delimiter', 'EntityReference', 'Name', 'ProcessingInstruction', 'Text']) {
+    semanticTokenColors[`xmlDocComment${suffix}:csharp`] = plain(comment);
+  }
+  for (const [token, color] of Object.entries({ concept: type, modifier: kw, bracket: punct, unknown: fg })) {
+    semanticTokenColors[`${token}:cpp`] = plain(color);
+  }
+  semanticTokenColors['*.constructorOrDestructor:cpp'] = plain(fn);
   // Color and style only; the extension contributes no executable code or settings.
   return { $schema: 'vscode://schemas/color-theme', name: 'Velune Dark', type: 'dark', semanticHighlighting: true, colors, tokenColors, semanticTokenColors };
 }

@@ -1,10 +1,12 @@
 {
-  "version": "0.1.0",
-  "checks": 169,
+  "version": "0.1.1",
+  "checks": 275,
   "languages": [
     "typescript",
     "javascript",
     "tsx",
+    "csharp",
+    "cpp",
     "html",
     "css",
     "json",
@@ -727,8 +729,17 @@
       "minimum": 4.5
     }
   ],
+  "semanticContracts": {
+    "kind": "static declarations, not live LSP output",
+    "providers": [
+      "csharp",
+      "cpptools",
+      "clangd"
+    ],
+    "cases": 42
+  },
   "limits": [
-    "No live VS Code session or language-server integration was run.",
+    "No live VS Code, Cursor session or language-server integration was run.",
     "TextMate grammars are supplied by the pinned Shiki dependency; installed VS Code extensions may use different grammars.",
     "Overlapping selection, search and diff decorations still need visual evaluation in the editor.",
     "ANSI black is deliberately exempt from the normal-text contrast threshold."
