@@ -16,7 +16,7 @@ To create an installable extension:
 npm run package
 ```
 
-Packaging runs the build and tests automatically and writes `dist/velune-0.1.3.vsix`. The package includes the theme, icon, README, changelog and license; development scripts, fixtures and reports are excluded.
+Packaging runs the build and tests automatically and writes `dist/velune-0.2.0.vsix`. The package includes the theme, icon, README, changelog and license; development scripts, fixtures and reports are excluded.
 
 `npm run build:icon` regenerates the extension icon from `assets/velune-mark.svg`. The full build also exports 1024px PNG versions of the icon and transparent mark to `dist/`.
 
@@ -51,12 +51,15 @@ Use a language extension compatible with your editor to inspect semantic highlig
 - TextMate tokenization with the pinned Shiki grammars for TypeScript, JavaScript, TSX, HTML, CSS, JSON, Python, Markdown, C#, C++, Rust and Java.
 - Specific syntax colors for C#, C++, Rust and Java.
 - Static semantic token contracts for C#, C/C++, clangd, rust-analyzer and Red Hat Java. Upstream declarations are recorded in [`tests/semantic-providers.json`](../tests/semantic-providers.json).
+- Primary and secondary button labels, badges, keyboard focus and design bounds for control fills and body text.
 - Contrast across editor text, syntax, selections, search, Git diffs, interface text and terminal colors.
 
 Outputs:
 
 - [`docs/validation.json`](validation.json): check totals, contrast ratios and test limitations.
 - `dist/token-preview.html` and [`docs/token-preview.html`](token-preview.html): the generated TextMate preview. Open either file in a browser after running the tests.
+
+- `dist/ui-preview.html` and [`docs/ui-preview.html`](ui-preview.html): an approximate interface showing actual control colors, including hover and keyboard focus. It is not a screenshot of VS Code.
 
 The **Validate Velune** workflow packages and tests pushes to `main` and pull requests. It checks that generated files are current and keeps the VSIX and validation artifacts for 30 days.
 
@@ -73,7 +76,7 @@ Use your usual font and a real project alongside the fixtures:
 1. Check comments and syntax colors during normal editing. Keywords should be lavender, functions blue, types pink, strings green and numbers amber. Variables and properties stay neutral.
 2. Compare `editor.semanticHighlighting.enabled` set to `false` and `true`, then restore your preference. If a symbol looks wrong, run **Developer: Inspect Editor Tokens and Scopes** and record its semantic type, modifiers and TextMate scopes. See the [VS Code semantic highlighting guide](https://code.visualstudio.com/api/language-extensions/semantic-highlight-guide).
 3. Check selections, repeated search matches and added or removed lines in Git diffs, including overlapping highlights.
-4. Check suggestions, hover text, inlay hints, diagnostics, menus and keyboard focus. In Cursor, also inspect AI suggestions, change review and chat code blocks.
+4. Check primary buttons in the empty Explorer and other sidebars, normal/hover states, keyboard focus, badges and remote status. Then check suggestions, hover text, inlay hints, diagnostics, menus and keyboard focus. In Cursor, also inspect AI suggestions, change review and chat code blocks.
 5. Run `python tests/fixtures/terminal-colors.py` in the integrated terminal to inspect ANSI colors.
 
 When reporting a problem, include the editor and language extension versions, font, code sample, semantic highlighting setting and a screenshot. Token inspection details help distinguish a color rule from a language extension's classification.

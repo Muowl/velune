@@ -1,62 +1,70 @@
 {
   "name": "Velune",
   "variant": "Dark",
-  "version": 1,
+  "version": 2,
   "background": {
-    "editor": "#141119",
-    "panel": "#1B1723",
-    "deep": "#100E14",
-    "elevated": "#221C2C",
-    "hover": "#2C2436",
-    "selection": "#2D203B",
-    "line": "#1C1724"
+    "editor": "#211E28",
+    "panel": "#1D1A23",
+    "deep": "#19161E",
+    "elevated": "#292532",
+    "hover": "#332D3D",
+    "selection": "#352E3F",
+    "line": "#27232F"
   },
   "border": {
-    "subtle": "#332B40",
-    "strong": "#625170"
+    "subtle": "#34303E",
+    "strong": "#71647F"
   },
   "text": {
-    "primary": "#E6DFEC",
-    "secondary": "#A99BB5",
-    "comment": "#96889F",
-    "punctuation": "#B4A7C2",
-    "disabled": "#766981",
-    "onAccent": "#141119"
+    "primary": "#D3CDDD",
+    "secondary": "#ADA2BA",
+    "comment": "#A196AC",
+    "punctuation": "#B2A6C1",
+    "disabled": "#797082",
+    "onAccent": "#211E28"
   },
   "brand": {
-    "accent": "#E14C6F"
+    "accent": "#E14C6F",
+    "background": "#141119"
   },
   "syntax": {
-    "keyword": "#C99AF7",
-    "function": "#AFBEF1",
-    "type": "#E2B1D6",
-    "string": "#B5CBAA",
-    "number": "#E2C291",
-    "escape": "#95CCC8"
+    "keyword": "#BBA0DF",
+    "function": "#A9B9DE",
+    "type": "#CFABC6",
+    "string": "#ABBFA3",
+    "number": "#D5BA93",
+    "escape": "#94BDB9"
   },
   "state": {
-    "error": "#F0808C",
-    "warning": "#E2C291",
-    "info": "#AFBEF1",
-    "success": "#B5CBAA",
-    "hint": "#A99BB5"
+    "error": "#DF94A0",
+    "warning": "#D5BA93",
+    "info": "#A9B9DE",
+    "success": "#ABBFA3",
+    "hint": "#ADA2BA"
   },
   "terminal": {
-    "black": "#302838",
-    "red": "#E57387",
-    "green": "#A6C494",
-    "yellow": "#D9B87F",
-    "blue": "#9BABDF",
-    "magenta": "#BD90E5",
-    "cyan": "#8DBFBC",
-    "white": "#D7CFDF",
-    "brightBlack": "#96889F",
-    "brightRed": "#F28D9C",
-    "brightGreen": "#BBD8AA",
-    "brightYellow": "#EAD09F",
-    "brightBlue": "#BAC9FF",
-    "brightMagenta": "#D6ACFF",
-    "brightCyan": "#ADE0DC",
-    "brightWhite": "#F2ECF7"
+    "black": "#38313F",
+    "red": "#D48C9B",
+    "green": "#A6BB9B",
+    "yellow": "#CEB18B",
+    "blue": "#A1B0D3",
+    "magenta": "#B59BD2",
+    "cyan": "#8FB8B5",
+    "white": "#CDC5D7",
+    "brightBlack": "#A196AC",
+    "brightRed": "#E4A0AB",
+    "brightGreen": "#BDD0B2",
+    "brightYellow": "#DFC59F",
+    "brightBlue": "#B8C6E6",
+    "brightMagenta": "#CAB0E5",
+    "brightCyan": "#A9CFCA",
+    "brightWhite": "#DED7E7"
+  },
+  "interaction": {
+    "accent": "#AD98C6",
+    "background": "#484057",
+    "hover": "#554B65",
+    "foreground": "#E0D7EC",
+    "border": "#81708F"
   }
 }

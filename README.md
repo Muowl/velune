@@ -2,11 +2,11 @@
 
 # Velune
 
-A dark theme for VS Code, inspired by Evernight from Honkai: Star Rail. Near-black backgrounds, lavender keywords, soft blue functions and restrained crimson accents.
+A dark theme for VS Code, inspired by Evernight from Honkai: Star Rail. Soft plum backgrounds, pastel lavender keywords, blue functions and quiet controls. The umbrella keeps its crimson detail; everyday actions use muted plum fills.
 
-![TypeScript syntax highlighted with Velune Dark](assets/preview.png)
+![Velune Dark interface color study](assets/preview.png)
 
-TextMate preview generated from the theme. Fonts and semantic highlighting may change how code looks in your editor.
+Interface color study generated from actual theme tokens and TextMate highlighting, not a VS Code screenshot. Fonts, layout and semantic highlighting may differ in your editor.
 
 ## Install
 
@@ -17,7 +17,7 @@ TextMate preview generated from the theme. Fonts and semantic highlighting may c
 You can also install from the terminal:
 
 ```sh
-code --install-extension velune-0.1.3.vsix
+code --install-extension velune-0.2.0.vsix
 ```
 
 For Cursor, use **Extensions: Install from VSIX…** in the Command Palette and select the same theme. These controls are in Cursor's [IDE view](https://cursor.com/help/customization/themes).
@@ -28,20 +28,24 @@ To build the VSIX yourself, see [Development](#development).
 
 | Role | Color |
 | --- | --- |
-| Editor background | `#141119` |
-| Panels | `#1B1723` |
-| Text | `#E6DFEC` |
-| Comments | `#96889F` |
-| Keywords | `#C99AF7` |
-| Functions | `#AFBEF1` |
-| Types | `#E2B1D6` |
-| Strings | `#B5CBAA` |
-| Numbers and literals | `#E2C291` |
-| Crimson accent | `#E14C6F` |
+| Editor background | `#211E28` |
+| Panels | `#1D1A23` |
+| Text | `#D3CDDD` |
+| Comments | `#A196AC` |
+| Keywords | `#BBA0DF` |
+| Functions | `#A9B9DE` |
+| Types | `#CFABC6` |
+| Strings | `#ABBFA3` |
+| Numbers and literals | `#D5BA93` |
+| Primary button | `#484057` |
+| Interactive accent | `#AD98C6` |
+| Brand crimson | `#E14C6F` |
 
 Variables, parameters and properties stay neutral. Code and comments use regular text, while Markdown keeps explicit emphasis. The theme also includes Git diff colors, diagnostics and all 16 ANSI terminal colors.
 
 Velune contributes colors and styles only, with no activation code or runtime dependencies. Your font, font size and file icon theme stay as you configured them.
+
+Version 0.2.0 responds to feedback from everyday use: lighter dark surfaces, gentler text and syntax, and muted primary actions with clear hover and keyboard focus. [Design notes](docs/design.md) explain the balance and the Catppuccin inspiration.
 
 ## Language support
 
@@ -58,7 +62,7 @@ npm ci --ignore-scripts
 npm run package
 ```
 
-This builds the theme and icon, runs validation and creates `dist/velune-0.1.3.vsix`.
+This builds the theme and icon, runs validation and creates `dist/velune-0.2.0.vsix`.
 
 See the [development guide](docs/development.md) for the source layout, editor preview and validation workflow. Changes between versions are listed in the [changelog](CHANGELOG.md).
 

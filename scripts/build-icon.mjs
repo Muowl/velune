@@ -7,7 +7,7 @@ const root = fileURLToPath(new URL('../', import.meta.url));
 const assets = path.join(root, 'assets');
 const palette = JSON.parse(await readFile(path.join(root, 'core/palette.json'), 'utf8'));
 const mark = await readFile(path.join(assets, 'velune-mark.svg'), 'utf8');
-const background = `<rect width="1254" height="1254" fill="${palette.background.editor}"/>`;
+const background = `<rect width="1254" height="1254" fill="${palette.brand.background}"/>`;
 const icon = mark.replace('</desc>', '</desc>\n  ' + background);
 
 await mkdir(path.join(root, 'dist'), { recursive: true });

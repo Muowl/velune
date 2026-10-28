@@ -1,8 +1,8 @@
 {
   "name": "velune",
   "displayName": "Velune",
-  "description": "A dark theme inspired by Evernight, with vivid lavender syntax and restrained crimson accents.",
-  "version": "0.1.3",
+  "description": "A dark theme inspired by Evernight, with soft plum surfaces, pastel syntax and quiet controls.",
+  "version": "0.2.0",
   "publisher": "muowl",
   "private": true,
   "license": "MIT",
@@ -26,7 +26,7 @@
     "cursor"
   ],
   "galleryBanner": {
-    "color": "#141119",
+    "color": "#211E28",
     "theme": "dark"
   },
   "capabilities": {
@@ -48,7 +48,7 @@
     "build": "node scripts/build.mjs && node scripts/build-icon.mjs",
     "test": "node scripts/validate.mjs",
     "vscode:prepublish": "npm run build && npm test",
-    "package": "vsce package --no-dependencies --out dist/velune-0.1.3.vsix",
+    "package": "vsce package --no-dependencies --out dist/velune-0.2.0.vsix",
     "build:icon": "node scripts/build-icon.mjs"
   },
   "devDependencies": {

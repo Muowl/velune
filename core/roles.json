@@ -25,5 +25,10 @@
   "status.warning": "state.warning",
   "status.info": "state.info",
   "status.success": "state.success",
-  "status.hint": "state.hint"
+  "status.hint": "state.hint",
+  "accent.interactive": "interaction.accent",
+  "control.background": "interaction.background",
+  "control.hover": "interaction.hover",
+  "control.foreground": "interaction.foreground",
+  "control.border": "interaction.border"
 }

@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import path from 'node:path';
 import { createHighlighter } from 'shiki';
+import { uiPreview } from './preview-ui.mjs';
 import { root, palette, createTheme } from './build.mjs';
 
 const theme = JSON.parse(await readFile(path.join(root, 'themes/velune-dark-color-theme.json'), 'utf8'));
@@ -17,7 +18,7 @@ check('All workbench colors are valid hex values', Object.values(theme.colors).e
 check('All UI color IDs exist in the official reference snapshot', Object.keys(theme.colors).every(key => colorReference.ids.includes(key)));
 check('Semantic highlighting is enabled', theme.semanticHighlighting === true);
 check('All 16 terminal colors are defined', Object.keys(theme.colors).filter(key => key.startsWith('terminal.ansi')).length === 16);
-check('The central palette keeps the approved vivid colors', palette.syntax.keyword === '#C99AF7' && palette.syntax.function === '#AFBEF1' && palette.syntax.type === '#E2B1D6' && palette.syntax.string === '#B5CBAA' && palette.syntax.number === '#E2C291' && palette.brand.accent === '#E14C6F');
+check('Syntax roles keep distinct colors', new Set(Object.values(palette.syntax)).size === 6);
 check('Comment style is upright', theme.tokenColors.find(rule => rule.name === 'Comments').settings.fontStyle === '' && theme.semanticTokenColors.comment.italic === false);
 check('Executable-code rules have no bold or italic', theme.tokenColors.filter(rule => !rule.name.startsWith('Markdown')).every(rule => rule.settings.fontStyle === ''));
 
@@ -51,8 +52,26 @@ for (const surface of ['panel', 'elevated', 'hover', 'selection']) {
   contrast(`Primary UI text on ${surface}`, palette.text.primary, palette.background[surface]);
   contrast(`Secondary UI text on ${surface}`, palette.text.secondary, palette.background[surface]);
 }
-contrast('Button label', palette.text.onAccent, palette.brand.accent);
-contrast('Hovered button label', palette.text.onAccent, palette.state.error);
+for (const [name, foreground, background] of [
+  ['Button label', 'button.foreground', 'button.background'],
+  ['Hovered button label', 'button.foreground', 'button.hoverBackground'],
+  ['Secondary button label', 'button.secondaryForeground', 'button.secondaryBackground'],
+  ['Hovered secondary button label', 'button.secondaryForeground', 'button.secondaryHoverBackground'],
+  ['Badge label', 'badge.foreground', 'badge.background'],
+  ['Activity badge label', 'activityBarBadge.foreground', 'activityBarBadge.background'],
+  ['Remote indicator label', 'statusBarItem.remoteForeground', 'statusBarItem.remoteBackground']
+]) contrast(name, theme.colors[foreground], theme.colors[background]);
+// Design bounds prevent regressions to bright filled controls and near-white text.
+// These are project choices, not a measure or guarantee of eye comfort.
+check('Body text uses moderate contrast', ratio(theme.colors['editor.foreground'], theme.colors['editor.background']) >= 7 && ratio(theme.colors['editor.foreground'], theme.colors['editor.background']) <= 12);
+for (const surface of ['editor.background', 'sideBar.background', 'editorWidget.background']) {
+  for (const control of ['button.background', 'button.hoverBackground', 'badge.background', 'activityBarBadge.background']) {
+    check(`${control} remains restrained on ${surface}`, ratio(theme.colors[control], theme.colors[surface]) < 2.8);
+  }
+  contrast(`Keyboard focus on ${surface}`, theme.colors.focusBorder, theme.colors[surface], 3);
+}
+contrast('Button boundary on sidebar', theme.colors['button.border'], theme.colors['sideBar.background'], 3);
+check('Routine controls do not use diagnostic or brand fills', ['button.background', 'button.hoverBackground', 'badge.background', 'activityBarBadge.background'].every(key => ![palette.brand.accent, palette.state.error].includes(theme.colors[key])));
 for (const [role, color] of Object.entries(palette.state)) contrast(`${role} diagnostic`, color, palette.background.editor);
 for (const [role, color] of Object.entries(palette.terminal)) {
   // ANSI black is intentionally a dark base color, not an accessible normal-text choice.
@@ -163,12 +182,15 @@ check('Deprecated symbols retain strikethrough', theme.semanticTokenColors['*.de
 check('Java constructors retain the callable color', theme.semanticTokenColors['*.constructor:java'].foreground === palette.syntax.function);
 check('Java documentation tokens retain the comment color', theme.semanticTokenColors['*.documentation:java'].foreground === palette.text.comment);
 check('Rust mutable symbols do not receive underline', theme.semanticTokenColors['*.mutable:rust'].underline === false);
+const workbenchPreview = uiPreview(theme, highlighter.codeToHtml(await readFile(path.join(root, 'tests/fixtures/theme.ts'), 'utf8'), { lang: 'typescript', theme: 'velune' }));
 highlighter.dispose();
 await mkdir(path.join(root, 'dist'), { recursive: true });
 await mkdir(path.join(root, 'docs'), { recursive: true });
 const report = { version: manifest.version, checks: checks.length, languages: fixtures.map(([lang]) => lang), contrasts, semanticContracts: { kind: 'static declarations, not live LSP output', providers: providers.map(provider => provider.id), cases: Object.values(providerCases).reduce((sum, cases) => sum + Object.keys(cases).length, 0) }, limits: ['No live VS Code, Cursor session or language-server integration was run.', 'TextMate grammars are supplied by the pinned Shiki dependency; installed VS Code extensions may use different grammars.', 'Overlapping selection, search and diff decorations still need visual evaluation in the editor.', 'ANSI black is deliberately exempt from the normal-text contrast threshold.'] };
 await writeFile(path.join(root, 'docs/validation.json'), JSON.stringify(report, null, 2) + '\n');
-const preview = `<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Velune — syntax preview</title><style>body{margin:0;background:${palette.background.editor};color:${palette.text.primary};font:15px/1.6 system-ui}main{max-width:1040px;margin:auto;padding:24px}h1,h2{font-weight:500}h2{font-size:16px;color:${palette.text.secondary}}section{margin:28px 0}pre{padding:20px;border:1px solid ${palette.border.subtle};border-radius:8px;overflow:auto;font:14px/1.7 Consolas,monospace}header{border-bottom:2px solid ${palette.brand.accent};padding-bottom:12px}</style><main><header><h1>Velune Dark</h1><p>TextMate syntax preview generated with Shiki. This is not an editor screenshot.</p></header>${rendered.join('')}</main></html>`;
+const preview = `<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Velune — syntax preview</title><style>body{margin:0;background:${palette.background.editor};color:${palette.text.primary};font:15px/1.6 system-ui}main{max-width:1040px;margin:auto;padding:24px}h1,h2{font-weight:500}h2{font-size:16px;color:${palette.text.secondary}}section{margin:28px 0}pre{padding:20px;border:1px solid ${palette.border.subtle};border-radius:8px;overflow:auto;font:14px/1.7 Consolas,monospace}header{border-bottom:2px solid ${palette.interaction.accent};padding-bottom:12px}</style><main><header><h1>Velune Dark</h1><p>TextMate syntax preview generated with Shiki. This is not an editor screenshot.</p></header>${rendered.join('')}</main></html>`;
 await writeFile(path.join(root, 'dist/token-preview.html'), preview);
 await writeFile(path.join(root, 'docs/token-preview.html'), preview);
+await writeFile(path.join(root, 'dist/ui-preview.html'), workbenchPreview);
+await writeFile(path.join(root, 'docs/ui-preview.html'), workbenchPreview);
 console.log(`Passed ${checks.length} checks; ${contrasts.length} contrast pairs; ${fixtures.length} real TextMate grammars.`);

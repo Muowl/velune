@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.0 — 2026-10-28
+
+- Rebalanced the dark palette with lighter plum backgrounds, softer text and pastel syntax.
+- Replaced crimson primary buttons and error-colored hover with dedicated muted control colors.
+- Softened badges, remote status, cursor and focus accents while keeping keyboard focus visible.
+- Harmonized ANSI and diagnostic colors; preserved language token classifications and the original umbrella artwork.
+- Added control-state contrast checks, restrained-fill regression checks and a generated UI preview.
+
 ## 0.1.3 — 2026-10-23
 
 - Adopted the MIT license.

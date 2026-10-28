@@ -15,7 +15,7 @@ const bg = role('surface.editor'), panel = role('surface.panel'), chrome = role(
 const popup = role('surface.popup'), hover = role('surface.hover'), selection = role('surface.selection');
 const fg = role('text.primary'), muted = role('text.secondary'), comment = role('text.comment');
 const punct = role('text.punctuation'), disabled = role('text.disabled'), border = role('border.default');
-const accent = role('accent.primary'), kw = role('syntax.keyword'), fn = role('syntax.function');
+const accent = role('accent.interactive'), kw = role('syntax.keyword'), fn = role('syntax.function');
 const type = role('syntax.type'), string = role('syntax.string'), number = role('syntax.number');
 const error = role('status.error'), warning = role('status.warning'), info = role('status.info');
 const success = role('status.success'), cyan = role('syntax.escape');
@@ -37,9 +37,12 @@ export function createTheme() {
   set(disabled, 'disabledForeground', 'list.deemphasizedForeground');
   set(comment, 'editorLineNumber.foreground', 'gitDecoration.ignoredResourceForeground', 'gitDecoration.submoduleResourceForeground');
   set(fg, 'editorLineNumber.activeForeground', 'editorSuggestWidget.selectedForeground', 'menu.selectionForeground', 'button.secondaryForeground', 'peekViewTitleLabel.foreground', 'peekViewResult.lineForeground', 'peekViewResult.fileForeground', 'checkbox.foreground');
-  set(accent, 'focusBorder', 'activityBar.activeBorder', 'tab.activeBorderTop', 'panelTitle.activeBorder', 'editorCursor.foreground', 'terminalCursor.foreground', 'button.background', 'badge.background', 'activityBarBadge.background', 'progressBar.background', 'inputOption.activeBorder', 'settings.modifiedItemIndicator', 'statusBarItem.remoteBackground');
-  set(role('text.onAccent'), 'button.foreground', 'badge.foreground', 'activityBarBadge.foreground', 'statusBarItem.remoteForeground');
-  set(error, 'button.hoverBackground');
+  set(accent, 'focusBorder', 'activityBar.activeBorder', 'tab.activeBorderTop', 'panelTitle.activeBorder', 'editorCursor.foreground', 'terminalCursor.foreground', 'progressBar.background', 'inputOption.activeBorder', 'settings.modifiedItemIndicator');
+  // Filled controls use dedicated muted surfaces, independent of brand and diagnostics.
+  set(role('control.background'), 'button.background', 'badge.background', 'activityBarBadge.background', 'statusBarItem.remoteBackground');
+  set(role('control.foreground'), 'button.foreground', 'badge.foreground', 'activityBarBadge.foreground', 'statusBarItem.remoteForeground');
+  set(role('control.hover'), 'button.hoverBackground', 'button.secondaryHoverBackground');
+  set(role('control.border'), 'button.border');
   set(p.background.line, 'editor.lineHighlightBackground', 'editorInlayHint.background', 'editorInlayHint.typeBackground', 'editorInlayHint.parameterBackground', 'sideBarSectionHeader.background', 'debugToolBar.background', 'notebook.focusedCellBackground');
   set(transparent, 'editor.lineHighlightBorder', 'tab.activeBorder', 'tab.unfocusedActiveBorder', 'tab.unfocusedActiveBorderTop', 'editorUnnecessaryCode.border', 'editorBracketMatch.background');
   set(p.border.strong, 'editorIndentGuide.activeBackground1', 'checkbox.border', 'sash.hoverBorder');
