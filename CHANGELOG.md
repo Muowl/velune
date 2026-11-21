@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.0 — 2026-11-20
+
+- Redesigned the palette from Evernight's artwork with One Dark–style vividness, replacing the pastel syntax.
+- Roughly doubled syntax chroma: violet keywords, rose types, periwinkle functions, green strings, amber numbers and cyan escapes.
+- Muted body text to a cool grey and gave surfaces a night-indigo tint, with an indigo selection band.
+- Matched diagnostics, Git decorations, ANSI terminal colors and the focus accent to the new palette; kept muted control fills.
+
 ## 0.2.0 — 2026-10-28
 
 - Rebalanced the dark palette with lighter plum backgrounds, softer text and pastel syntax.

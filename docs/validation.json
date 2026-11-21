@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "checks": 431,
   "languages": [
     "typescript",
@@ -18,779 +18,779 @@
   "contrasts": [
     {
       "name": "text on editor",
-      "foreground": "#D3CDDD",
-      "background": "#211E28",
-      "ratio": 10.5747,
+      "foreground": "#C4C2D1",
+      "background": "#252230",
+      "ratio": 8.8764,
       "minimum": 4.5
     },
     {
       "name": "comment on editor",
-      "foreground": "#A196AC",
-      "background": "#211E28",
-      "ratio": 5.8342,
+      "foreground": "#A299B4",
+      "background": "#252230",
+      "ratio": 5.7414,
       "minimum": 4.5
     },
     {
       "name": "punctuation on editor",
-      "foreground": "#B2A6C1",
-      "background": "#211E28",
-      "ratio": 7.1174,
+      "foreground": "#A8A9BE",
+      "background": "#252230",
+      "ratio": 6.7279,
       "minimum": 4.5
     },
     {
       "name": "keyword on editor",
-      "foreground": "#BBA0DF",
-      "background": "#211E28",
-      "ratio": 7.1871,
+      "foreground": "#BF8DF2",
+      "background": "#252230",
+      "ratio": 6.1529,
       "minimum": 4.5
     },
     {
       "name": "function on editor",
-      "foreground": "#A9B9DE",
-      "background": "#211E28",
-      "ratio": 8.3382,
+      "foreground": "#87B1FD",
+      "background": "#252230",
+      "ratio": 7.2121,
       "minimum": 4.5
     },
     {
       "name": "type on editor",
-      "foreground": "#CFABC6",
-      "background": "#211E28",
-      "ratio": 8.0356,
+      "foreground": "#F298A8",
+      "background": "#252230",
+      "ratio": 7.2823,
       "minimum": 4.5
     },
     {
       "name": "string on editor",
-      "foreground": "#ABBFA3",
-      "background": "#211E28",
-      "ratio": 8.3627,
+      "foreground": "#99CF86",
+      "background": "#252230",
+      "ratio": 8.6093,
       "minimum": 4.5
     },
     {
       "name": "number on editor",
-      "foreground": "#D5BA93",
-      "background": "#211E28",
-      "ratio": 8.8009,
+      "foreground": "#EBB46C",
+      "background": "#252230",
+      "ratio": 8.3527,
       "minimum": 4.5
     },
     {
       "name": "escape on editor",
-      "foreground": "#94BDB9",
-      "background": "#211E28",
-      "ratio": 7.9927,
+      "foreground": "#5FCCD2",
+      "background": "#252230",
+      "ratio": 8.1875,
       "minimum": 4.5
     },
     {
       "name": "text on selection",
-      "foreground": "#D3CDDD",
-      "background": "#352E3F",
-      "ratio": 8.3933,
+      "foreground": "#C4C2D1",
+      "background": "#2F3154",
+      "ratio": 7.099,
       "minimum": 4.5
     },
     {
       "name": "comment on selection",
-      "foreground": "#A196AC",
-      "background": "#352E3F",
-      "ratio": 4.6307,
+      "foreground": "#A299B4",
+      "background": "#2F3154",
+      "ratio": 4.5917,
       "minimum": 4.5
     },
     {
       "name": "punctuation on selection",
-      "foreground": "#B2A6C1",
-      "background": "#352E3F",
-      "ratio": 5.6492,
+      "foreground": "#A8A9BE",
+      "background": "#2F3154",
+      "ratio": 5.3807,
       "minimum": 4.5
     },
     {
       "name": "keyword on selection",
-      "foreground": "#BBA0DF",
-      "background": "#352E3F",
-      "ratio": 5.7045,
+      "foreground": "#BF8DF2",
+      "background": "#2F3154",
+      "ratio": 4.9208,
       "minimum": 4.5
     },
     {
       "name": "function on selection",
-      "foreground": "#A9B9DE",
-      "background": "#352E3F",
-      "ratio": 6.6182,
+      "foreground": "#87B1FD",
+      "background": "#2F3154",
+      "ratio": 5.7679,
       "minimum": 4.5
     },
     {
       "name": "type on selection",
-      "foreground": "#CFABC6",
-      "background": "#352E3F",
-      "ratio": 6.3779,
+      "foreground": "#F298A8",
+      "background": "#2F3154",
+      "ratio": 5.824,
       "minimum": 4.5
     },
     {
       "name": "string on selection",
-      "foreground": "#ABBFA3",
-      "background": "#352E3F",
-      "ratio": 6.6376,
+      "foreground": "#99CF86",
+      "background": "#2F3154",
+      "ratio": 6.8853,
       "minimum": 4.5
     },
     {
       "name": "number on selection",
-      "foreground": "#D5BA93",
-      "background": "#352E3F",
-      "ratio": 6.9854,
+      "foreground": "#EBB46C",
+      "background": "#2F3154",
+      "ratio": 6.6801,
       "minimum": 4.5
     },
     {
       "name": "escape on selection",
-      "foreground": "#94BDB9",
-      "background": "#352E3F",
-      "ratio": 6.3439,
+      "foreground": "#5FCCD2",
+      "background": "#2F3154",
+      "ratio": 6.548,
       "minimum": 4.5
     },
     {
       "name": "text on currentLine",
-      "foreground": "#D3CDDD",
-      "background": "#27232F",
-      "ratio": 9.9043,
+      "foreground": "#C4C2D1",
+      "background": "#2A2834",
+      "ratio": 8.2564,
       "minimum": 4.5
     },
     {
       "name": "comment on currentLine",
-      "foreground": "#A196AC",
-      "background": "#27232F",
-      "ratio": 5.4643,
+      "foreground": "#A299B4",
+      "background": "#2A2834",
+      "ratio": 5.3404,
       "minimum": 4.5
     },
     {
       "name": "punctuation on currentLine",
-      "foreground": "#B2A6C1",
-      "background": "#27232F",
-      "ratio": 6.6662,
+      "foreground": "#A8A9BE",
+      "background": "#2A2834",
+      "ratio": 6.2579,
       "minimum": 4.5
     },
     {
       "name": "keyword on currentLine",
-      "foreground": "#BBA0DF",
-      "background": "#27232F",
-      "ratio": 6.7315,
+      "foreground": "#BF8DF2",
+      "background": "#2A2834",
+      "ratio": 5.7231,
       "minimum": 4.5
     },
     {
       "name": "function on currentLine",
-      "foreground": "#A9B9DE",
-      "background": "#27232F",
-      "ratio": 7.8096,
+      "foreground": "#87B1FD",
+      "background": "#2A2834",
+      "ratio": 6.7083,
       "minimum": 4.5
     },
     {
       "name": "type on currentLine",
-      "foreground": "#CFABC6",
-      "background": "#27232F",
-      "ratio": 7.5261,
+      "foreground": "#F298A8",
+      "background": "#2A2834",
+      "ratio": 6.7736,
       "minimum": 4.5
     },
     {
       "name": "string on currentLine",
-      "foreground": "#ABBFA3",
-      "background": "#27232F",
-      "ratio": 7.8325,
+      "foreground": "#99CF86",
+      "background": "#2A2834",
+      "ratio": 8.0079,
       "minimum": 4.5
     },
     {
       "name": "number on currentLine",
-      "foreground": "#D5BA93",
-      "background": "#27232F",
-      "ratio": 8.243,
+      "foreground": "#EBB46C",
+      "background": "#2A2834",
+      "ratio": 7.7693,
       "minimum": 4.5
     },
     {
       "name": "escape on currentLine",
-      "foreground": "#94BDB9",
-      "background": "#27232F",
-      "ratio": 7.486,
+      "foreground": "#5FCCD2",
+      "background": "#2A2834",
+      "ratio": 7.6155,
       "minimum": 4.5
     },
     {
       "name": "text on wordRead",
-      "foreground": "#D3CDDD",
-      "background": "#342e3e",
-      "ratio": 8.4329,
+      "foreground": "#C4C2D1",
+      "background": "#382f48",
+      "ratio": 7.1836,
       "minimum": 4.5
     },
     {
       "name": "comment on wordRead",
-      "foreground": "#A196AC",
-      "background": "#342e3e",
-      "ratio": 4.6525,
+      "foreground": "#A299B4",
+      "background": "#382f48",
+      "ratio": 4.6465,
       "minimum": 4.5
     },
     {
       "name": "punctuation on wordRead",
-      "foreground": "#B2A6C1",
-      "background": "#342e3e",
-      "ratio": 5.6759,
+      "foreground": "#A8A9BE",
+      "background": "#382f48",
+      "ratio": 5.4448,
       "minimum": 4.5
     },
     {
       "name": "keyword on wordRead",
-      "foreground": "#BBA0DF",
-      "background": "#342e3e",
-      "ratio": 5.7314,
+      "foreground": "#BF8DF2",
+      "background": "#382f48",
+      "ratio": 4.9795,
       "minimum": 4.5
     },
     {
       "name": "function on wordRead",
-      "foreground": "#A9B9DE",
-      "background": "#342e3e",
-      "ratio": 6.6494,
+      "foreground": "#87B1FD",
+      "background": "#382f48",
+      "ratio": 5.8366,
       "minimum": 4.5
     },
     {
       "name": "type on wordRead",
-      "foreground": "#CFABC6",
-      "background": "#342e3e",
-      "ratio": 6.408,
+      "foreground": "#F298A8",
+      "background": "#382f48",
+      "ratio": 5.8934,
       "minimum": 4.5
     },
     {
       "name": "string on wordRead",
-      "foreground": "#ABBFA3",
-      "background": "#342e3e",
-      "ratio": 6.6689,
+      "foreground": "#99CF86",
+      "background": "#382f48",
+      "ratio": 6.9673,
       "minimum": 4.5
     },
     {
       "name": "number on wordRead",
-      "foreground": "#D5BA93",
-      "background": "#342e3e",
-      "ratio": 7.0184,
+      "foreground": "#EBB46C",
+      "background": "#382f48",
+      "ratio": 6.7597,
       "minimum": 4.5
     },
     {
       "name": "escape on wordRead",
-      "foreground": "#94BDB9",
-      "background": "#342e3e",
-      "ratio": 6.3739,
+      "foreground": "#5FCCD2",
+      "background": "#382f48",
+      "ratio": 6.626,
       "minimum": 4.5
     },
     {
       "name": "text on wordWrite",
-      "foreground": "#D3CDDD",
-      "background": "#342e3e",
-      "ratio": 8.4329,
+      "foreground": "#C4C2D1",
+      "background": "#382f48",
+      "ratio": 7.1836,
       "minimum": 4.5
     },
     {
       "name": "comment on wordWrite",
-      "foreground": "#A196AC",
-      "background": "#342e3e",
-      "ratio": 4.6525,
+      "foreground": "#A299B4",
+      "background": "#382f48",
+      "ratio": 4.6465,
       "minimum": 4.5
     },
     {
       "name": "punctuation on wordWrite",
-      "foreground": "#B2A6C1",
-      "background": "#342e3e",
-      "ratio": 5.6759,
+      "foreground": "#A8A9BE",
+      "background": "#382f48",
+      "ratio": 5.4448,
       "minimum": 4.5
     },
     {
       "name": "keyword on wordWrite",
-      "foreground": "#BBA0DF",
-      "background": "#342e3e",
-      "ratio": 5.7314,
+      "foreground": "#BF8DF2",
+      "background": "#382f48",
+      "ratio": 4.9795,
       "minimum": 4.5
     },
     {
       "name": "function on wordWrite",
-      "foreground": "#A9B9DE",
-      "background": "#342e3e",
-      "ratio": 6.6494,
+      "foreground": "#87B1FD",
+      "background": "#382f48",
+      "ratio": 5.8366,
       "minimum": 4.5
     },
     {
       "name": "type on wordWrite",
-      "foreground": "#CFABC6",
-      "background": "#342e3e",
-      "ratio": 6.408,
+      "foreground": "#F298A8",
+      "background": "#382f48",
+      "ratio": 5.8934,
       "minimum": 4.5
     },
     {
       "name": "string on wordWrite",
-      "foreground": "#ABBFA3",
-      "background": "#342e3e",
-      "ratio": 6.6689,
+      "foreground": "#99CF86",
+      "background": "#382f48",
+      "ratio": 6.9673,
       "minimum": 4.5
     },
     {
       "name": "number on wordWrite",
-      "foreground": "#D5BA93",
-      "background": "#342e3e",
-      "ratio": 7.0184,
+      "foreground": "#EBB46C",
+      "background": "#382f48",
+      "ratio": 6.7597,
       "minimum": 4.5
     },
     {
       "name": "escape on wordWrite",
-      "foreground": "#94BDB9",
-      "background": "#342e3e",
-      "ratio": 6.3739,
+      "foreground": "#5FCCD2",
+      "background": "#382f48",
+      "ratio": 6.626,
       "minimum": 4.5
     },
     {
       "name": "text on search",
-      "foreground": "#D3CDDD",
-      "background": "#332e33",
-      "ratio": 8.5771,
+      "foreground": "#C4C2D1",
+      "background": "#393136",
+      "ratio": 7.1912,
       "minimum": 4.5
     },
     {
       "name": "comment on search",
-      "foreground": "#A196AC",
-      "background": "#332e33",
-      "ratio": 4.7321,
+      "foreground": "#A299B4",
+      "background": "#393136",
+      "ratio": 4.6514,
       "minimum": 4.5
     },
     {
       "name": "punctuation on search",
-      "foreground": "#B2A6C1",
-      "background": "#332e33",
-      "ratio": 5.7729,
+      "foreground": "#A8A9BE",
+      "background": "#393136",
+      "ratio": 5.4505,
       "minimum": 4.5
     },
     {
       "name": "keyword on search",
-      "foreground": "#BBA0DF",
-      "background": "#332e33",
-      "ratio": 5.8295,
+      "foreground": "#BF8DF2",
+      "background": "#393136",
+      "ratio": 4.9847,
       "minimum": 4.5
     },
     {
       "name": "function on search",
-      "foreground": "#A9B9DE",
-      "background": "#332e33",
-      "ratio": 6.7631,
+      "foreground": "#87B1FD",
+      "background": "#393136",
+      "ratio": 5.8428,
       "minimum": 4.5
     },
     {
       "name": "type on search",
-      "foreground": "#CFABC6",
-      "background": "#332e33",
-      "ratio": 6.5176,
+      "foreground": "#F298A8",
+      "background": "#393136",
+      "ratio": 5.8997,
       "minimum": 4.5
     },
     {
       "name": "string on search",
-      "foreground": "#ABBFA3",
-      "background": "#332e33",
-      "ratio": 6.783,
+      "foreground": "#99CF86",
+      "background": "#393136",
+      "ratio": 6.9747,
       "minimum": 4.5
     },
     {
       "name": "number on search",
-      "foreground": "#D5BA93",
-      "background": "#332e33",
-      "ratio": 7.1384,
+      "foreground": "#EBB46C",
+      "background": "#393136",
+      "ratio": 6.7669,
       "minimum": 4.5
     },
     {
       "name": "escape on search",
-      "foreground": "#94BDB9",
-      "background": "#332e33",
-      "ratio": 6.4829,
+      "foreground": "#5FCCD2",
+      "background": "#393136",
+      "ratio": 6.633,
       "minimum": 4.5
     },
     {
       "name": "text on inserted",
-      "foreground": "#D3CDDD",
-      "background": "#2f2f34",
-      "ratio": 8.5897,
+      "foreground": "#C4C2D1",
+      "background": "#313439",
+      "ratio": 7.13,
       "minimum": 4.5
     },
     {
       "name": "comment on inserted",
-      "foreground": "#A196AC",
-      "background": "#2f2f34",
-      "ratio": 4.739,
+      "foreground": "#A299B4",
+      "background": "#313439",
+      "ratio": 4.6118,
       "minimum": 4.5
     },
     {
       "name": "punctuation on inserted",
-      "foreground": "#B2A6C1",
-      "background": "#2f2f34",
-      "ratio": 5.7813,
+      "foreground": "#A8A9BE",
+      "background": "#313439",
+      "ratio": 5.4042,
       "minimum": 4.5
     },
     {
       "name": "keyword on inserted",
-      "foreground": "#BBA0DF",
-      "background": "#2f2f34",
-      "ratio": 5.838,
+      "foreground": "#BF8DF2",
+      "background": "#313439",
+      "ratio": 4.9423,
       "minimum": 4.5
     },
     {
       "name": "function on inserted",
-      "foreground": "#A9B9DE",
-      "background": "#2f2f34",
-      "ratio": 6.773,
+      "foreground": "#87B1FD",
+      "background": "#313439",
+      "ratio": 5.7931,
       "minimum": 4.5
     },
     {
       "name": "type on inserted",
-      "foreground": "#CFABC6",
-      "background": "#2f2f34",
-      "ratio": 6.5271,
+      "foreground": "#F298A8",
+      "background": "#313439",
+      "ratio": 5.8494,
       "minimum": 4.5
     },
     {
       "name": "string on inserted",
-      "foreground": "#ABBFA3",
-      "background": "#2f2f34",
-      "ratio": 6.7929,
+      "foreground": "#99CF86",
+      "background": "#313439",
+      "ratio": 6.9154,
       "minimum": 4.5
     },
     {
       "name": "number on inserted",
-      "foreground": "#D5BA93",
-      "background": "#2f2f34",
-      "ratio": 7.1488,
+      "foreground": "#EBB46C",
+      "background": "#313439",
+      "ratio": 6.7093,
       "minimum": 4.5
     },
     {
       "name": "escape on inserted",
-      "foreground": "#94BDB9",
-      "background": "#2f2f34",
-      "ratio": 6.4923,
+      "foreground": "#5FCCD2",
+      "background": "#313439",
+      "ratio": 6.5766,
       "minimum": 4.5
     },
     {
       "name": "text on removed",
-      "foreground": "#D3CDDD",
-      "background": "#392c36",
-      "ratio": 8.5331,
+      "foreground": "#C4C2D1",
+      "background": "#3e2a37",
+      "ratio": 7.5319,
       "minimum": 4.5
     },
     {
       "name": "comment on removed",
-      "foreground": "#A196AC",
-      "background": "#392c36",
-      "ratio": 4.7078,
+      "foreground": "#A299B4",
+      "background": "#3e2a37",
+      "ratio": 4.8717,
       "minimum": 4.5
     },
     {
       "name": "punctuation on removed",
-      "foreground": "#B2A6C1",
-      "background": "#392c36",
-      "ratio": 5.7433,
+      "foreground": "#A8A9BE",
+      "background": "#3e2a37",
+      "ratio": 5.7088,
       "minimum": 4.5
     },
     {
       "name": "keyword on removed",
-      "foreground": "#BBA0DF",
-      "background": "#392c36",
-      "ratio": 5.7995,
+      "foreground": "#BF8DF2",
+      "background": "#3e2a37",
+      "ratio": 5.2209,
       "minimum": 4.5
     },
     {
       "name": "function on removed",
-      "foreground": "#A9B9DE",
-      "background": "#392c36",
-      "ratio": 6.7284,
+      "foreground": "#87B1FD",
+      "background": "#3e2a37",
+      "ratio": 6.1196,
       "minimum": 4.5
     },
     {
       "name": "type on removed",
-      "foreground": "#CFABC6",
-      "background": "#392c36",
-      "ratio": 6.4842,
+      "foreground": "#F298A8",
+      "background": "#3e2a37",
+      "ratio": 6.1792,
       "minimum": 4.5
     },
     {
       "name": "string on removed",
-      "foreground": "#ABBFA3",
-      "background": "#392c36",
-      "ratio": 6.7482,
+      "foreground": "#99CF86",
+      "background": "#3e2a37",
+      "ratio": 7.3052,
       "minimum": 4.5
     },
     {
       "name": "number on removed",
-      "foreground": "#D5BA93",
-      "background": "#392c36",
-      "ratio": 7.1017,
+      "foreground": "#EBB46C",
+      "background": "#3e2a37",
+      "ratio": 7.0875,
       "minimum": 4.5
     },
     {
       "name": "escape on removed",
-      "foreground": "#94BDB9",
-      "background": "#392c36",
-      "ratio": 6.4496,
+      "foreground": "#5FCCD2",
+      "background": "#3e2a37",
+      "ratio": 6.9473,
       "minimum": 4.5
     },
     {
       "name": "Primary UI text on panel",
-      "foreground": "#D3CDDD",
-      "background": "#1D1A23",
-      "ratio": 11.0649,
+      "foreground": "#C4C2D1",
+      "background": "#1F1D29",
+      "ratio": 9.4663,
       "minimum": 4.5
     },
     {
       "name": "Secondary UI text on panel",
-      "foreground": "#ADA2BA",
-      "background": "#1D1A23",
-      "ratio": 7.0687,
+      "foreground": "#A8A5B9",
+      "background": "#1F1D29",
+      "ratio": 6.9095,
       "minimum": 4.5
     },
     {
       "name": "Primary UI text on elevated",
-      "foreground": "#D3CDDD",
-      "background": "#292532",
-      "ratio": 9.6418,
+      "foreground": "#C4C2D1",
+      "background": "#2D2A39",
+      "ratio": 7.9799,
       "minimum": 4.5
     },
     {
       "name": "Secondary UI text on elevated",
-      "foreground": "#ADA2BA",
-      "background": "#292532",
-      "ratio": 6.1596,
+      "foreground": "#A8A5B9",
+      "background": "#2D2A39",
+      "ratio": 5.8246,
       "minimum": 4.5
     },
     {
       "name": "Primary UI text on hover",
-      "foreground": "#D3CDDD",
-      "background": "#332D3D",
-      "ratio": 8.5547,
+      "foreground": "#C4C2D1",
+      "background": "#363344",
+      "ratio": 6.9927,
       "minimum": 4.5
     },
     {
       "name": "Secondary UI text on hover",
-      "foreground": "#ADA2BA",
-      "background": "#332D3D",
-      "ratio": 5.4651,
+      "foreground": "#A8A5B9",
+      "background": "#363344",
+      "ratio": 5.104,
       "minimum": 4.5
     },
     {
       "name": "Primary UI text on selection",
-      "foreground": "#D3CDDD",
-      "background": "#352E3F",
-      "ratio": 8.3933,
+      "foreground": "#C4C2D1",
+      "background": "#2F3154",
+      "ratio": 7.099,
       "minimum": 4.5
     },
     {
       "name": "Secondary UI text on selection",
-      "foreground": "#ADA2BA",
-      "background": "#352E3F",
-      "ratio": 5.362,
+      "foreground": "#A8A5B9",
+      "background": "#2F3154",
+      "ratio": 5.1816,
       "minimum": 4.5
     },
     {
       "name": "Button label",
-      "foreground": "#E0D7EC",
-      "background": "#484057",
-      "ratio": 7.035,
+      "foreground": "#ECE9F4",
+      "background": "#4A405D",
+      "ratio": 8.031,
       "minimum": 4.5
     },
     {
       "name": "Hovered button label",
-      "foreground": "#E0D7EC",
-      "background": "#554B65",
-      "ratio": 5.8517,
+      "foreground": "#ECE9F4",
+      "background": "#54496A",
+      "ratio": 6.9061,
       "minimum": 4.5
     },
     {
       "name": "Secondary button label",
-      "foreground": "#D3CDDD",
-      "background": "#332D3D",
-      "ratio": 8.5547,
+      "foreground": "#C4C2D1",
+      "background": "#363344",
+      "ratio": 6.9927,
       "minimum": 4.5
     },
     {
       "name": "Hovered secondary button label",
-      "foreground": "#D3CDDD",
-      "background": "#554B65",
-      "ratio": 5.2493,
+      "foreground": "#C4C2D1",
+      "background": "#54496A",
+      "ratio": 4.7219,
       "minimum": 4.5
     },
     {
       "name": "Badge label",
-      "foreground": "#E0D7EC",
-      "background": "#484057",
-      "ratio": 7.035,
+      "foreground": "#ECE9F4",
+      "background": "#4A405D",
+      "ratio": 8.031,
       "minimum": 4.5
     },
     {
       "name": "Activity badge label",
-      "foreground": "#E0D7EC",
-      "background": "#484057",
-      "ratio": 7.035,
+      "foreground": "#ECE9F4",
+      "background": "#4A405D",
+      "ratio": 8.031,
       "minimum": 4.5
     },
     {
       "name": "Remote indicator label",
-      "foreground": "#E0D7EC",
-      "background": "#484057",
-      "ratio": 7.035,
+      "foreground": "#ECE9F4",
+      "background": "#4A405D",
+      "ratio": 8.031,
       "minimum": 4.5
     },
     {
       "name": "Keyboard focus on editor.background",
-      "foreground": "#AD98C6",
-      "background": "#211E28",
-      "ratio": 6.3103,
+      "foreground": "#BE93EA",
+      "background": "#252230",
+      "ratio": 6.3334,
       "minimum": 3
     },
     {
       "name": "Keyboard focus on sideBar.background",
-      "foreground": "#AD98C6",
-      "background": "#1D1A23",
-      "ratio": 6.6028,
+      "foreground": "#BE93EA",
+      "background": "#1F1D29",
+      "ratio": 6.7542,
       "minimum": 3
     },
     {
       "name": "Keyboard focus on editorWidget.background",
-      "foreground": "#AD98C6",
-      "background": "#292532",
-      "ratio": 5.7536,
+      "foreground": "#BE93EA",
+      "background": "#2D2A39",
+      "ratio": 5.6937,
       "minimum": 3
     },
     {
       "name": "Button boundary on sidebar",
-      "foreground": "#81708F",
-      "background": "#1D1A23",
-      "ratio": 3.7963,
+      "foreground": "#807399",
+      "background": "#1F1D29",
+      "ratio": 3.8152,
       "minimum": 3
     },
     {
       "name": "error diagnostic",
-      "foreground": "#DF94A0",
-      "background": "#211E28",
-      "ratio": 6.9329,
+      "foreground": "#F2686E",
+      "background": "#252230",
+      "ratio": 5.1703,
       "minimum": 4.5
     },
     {
       "name": "warning diagnostic",
-      "foreground": "#D5BA93",
-      "background": "#211E28",
-      "ratio": 8.8009,
+      "foreground": "#EBB46C",
+      "background": "#252230",
+      "ratio": 8.3527,
       "minimum": 4.5
     },
     {
       "name": "info diagnostic",
-      "foreground": "#A9B9DE",
-      "background": "#211E28",
-      "ratio": 8.3382,
+      "foreground": "#87B1FD",
+      "background": "#252230",
+      "ratio": 7.2121,
       "minimum": 4.5
     },
     {
       "name": "success diagnostic",
-      "foreground": "#ABBFA3",
-      "background": "#211E28",
-      "ratio": 8.3627,
+      "foreground": "#99CF86",
+      "background": "#252230",
+      "ratio": 8.6093,
       "minimum": 4.5
     },
     {
       "name": "hint diagnostic",
-      "foreground": "#ADA2BA",
-      "background": "#211E28",
-      "ratio": 6.7556,
+      "foreground": "#A8A5B9",
+      "background": "#252230",
+      "ratio": 6.4789,
       "minimum": 4.5
     },
     {
       "name": "ANSI red",
-      "foreground": "#D48C9B",
-      "background": "#211E28",
-      "ratio": 6.2637,
+      "foreground": "#EE6C71",
+      "background": "#252230",
+      "ratio": 5.1986,
       "minimum": 4.5
     },
     {
       "name": "ANSI green",
-      "foreground": "#A6BB9B",
-      "background": "#211E28",
-      "ratio": 7.9646,
+      "foreground": "#8FCA7A",
+      "background": "#252230",
+      "ratio": 8.0711,
       "minimum": 4.5
     },
     {
       "name": "ANSI yellow",
-      "foreground": "#CEB18B",
-      "background": "#211E28",
-      "ratio": 8.0296,
+      "foreground": "#E7B369",
+      "background": "#252230",
+      "ratio": 8.1841,
       "minimum": 4.5
     },
     {
       "name": "ANSI blue",
-      "foreground": "#A1B0D3",
-      "background": "#211E28",
-      "ratio": 7.5457,
+      "foreground": "#7AACF6",
+      "background": "#252230",
+      "ratio": 6.7098,
       "minimum": 4.5
     },
     {
       "name": "ANSI magenta",
-      "foreground": "#B59BD2",
-      "background": "#211E28",
-      "ratio": 6.7009,
+      "foreground": "#BD8CEE",
+      "background": "#252230",
+      "ratio": 6.0361,
       "minimum": 4.5
     },
     {
       "name": "ANSI cyan",
-      "foreground": "#8FB8B5",
-      "background": "#211E28",
-      "ratio": 7.5654,
+      "foreground": "#5CC9CF",
+      "background": "#252230",
+      "ratio": 7.933,
       "minimum": 4.5
     },
     {
       "name": "ANSI white",
-      "foreground": "#CDC5D7",
-      "background": "#211E28",
-      "ratio": 9.8075,
+      "foreground": "#C4C2D0",
+      "background": "#252230",
+      "ratio": 8.8691,
       "minimum": 4.5
     },
     {
       "name": "ANSI brightBlack",
-      "foreground": "#A196AC",
-      "background": "#211E28",
-      "ratio": 5.8342,
+      "foreground": "#9995AA",
+      "background": "#252230",
+      "ratio": 5.3578,
       "minimum": 4.5
     },
     {
       "name": "ANSI brightRed",
-      "foreground": "#E4A0AB",
-      "background": "#211E28",
-      "ratio": 7.7401,
+      "foreground": "#FD8A8C",
+      "background": "#252230",
+      "ratio": 6.8071,
       "minimum": 4.5
     },
     {
       "name": "ANSI brightGreen",
-      "foreground": "#BDD0B2",
-      "background": "#211E28",
-      "ratio": 10.0147,
+      "foreground": "#A8E096",
+      "background": "#252230",
+      "ratio": 10.1971,
       "minimum": 4.5
     },
     {
       "name": "ANSI brightYellow",
-      "foreground": "#DFC59F",
-      "background": "#211E28",
-      "ratio": 9.8553,
+      "foreground": "#F5CC85",
+      "background": "#252230",
+      "ratio": 10.2643,
       "minimum": 4.5
     },
     {
       "name": "ANSI brightBlue",
-      "foreground": "#B8C6E6",
-      "background": "#211E28",
-      "ratio": 9.5692,
+      "foreground": "#99C3FF",
+      "background": "#252230",
+      "ratio": 8.5949,
       "minimum": 4.5
     },
     {
       "name": "ANSI brightMagenta",
-      "foreground": "#CAB0E5",
-      "background": "#211E28",
-      "ratio": 8.4721,
+      "foreground": "#D1A9FB",
+      "background": "#252230",
+      "ratio": 7.9837,
       "minimum": 4.5
     },
     {
       "name": "ANSI brightCyan",
-      "foreground": "#A9CFCA",
-      "background": "#211E28",
-      "ratio": 9.7305,
+      "foreground": "#80DEE3",
+      "background": "#252230",
+      "ratio": 9.9808,
       "minimum": 4.5
     },
     {
       "name": "ANSI brightWhite",
-      "foreground": "#DED7E7",
-      "background": "#211E28",
-      "ratio": 11.6938,
+      "foreground": "#E5E3EE",
+      "background": "#252230",
+      "ratio": 12.2607,
       "minimum": 4.5
     }
   ],

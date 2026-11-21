@@ -16,7 +16,7 @@ To create an installable extension:
 npm run package
 ```
 
-Packaging runs the build and tests automatically and writes `dist/velune-0.2.0.vsix`. The package includes the theme, icon, README, changelog and license; development scripts, fixtures and reports are excluded.
+Packaging runs the build and tests automatically and writes `dist/velune-0.3.0.vsix`. The package includes the theme, icon, README, changelog and license; development scripts, fixtures and reports are excluded.
 
 `npm run build:icon` regenerates the extension icon from `assets/velune-mark.svg`. The full build also exports 1024px PNG versions of the icon and transparent mark to `dist/`.
 
@@ -73,7 +73,7 @@ Contrast checks cover the color pairs listed in the report. Overlapping decorati
 
 Use your usual font and a real project alongside the fixtures:
 
-1. Check comments and syntax colors during normal editing. Keywords should be lavender, functions blue, types pink, strings green and numbers amber. Variables and properties stay neutral.
+1. Check comments and syntax colors during normal editing. Keywords should be violet, functions periwinkle blue, types rose, strings green, numbers amber and escapes cyan. Variables and properties stay neutral.
 2. Compare `editor.semanticHighlighting.enabled` set to `false` and `true`, then restore your preference. If a symbol looks wrong, run **Developer: Inspect Editor Tokens and Scopes** and record its semantic type, modifiers and TextMate scopes. See the [VS Code semantic highlighting guide](https://code.visualstudio.com/api/language-extensions/semantic-highlight-guide).
 3. Check selections, repeated search matches and added or removed lines in Git diffs, including overlapping highlights.
 4. Check primary buttons in the empty Explorer and other sidebars, normal/hover states, keyboard focus, badges and remote status. Then check suggestions, hover text, inlay hints, diagnostics, menus and keyboard focus. In Cursor, also inspect AI suggestions, change review and chat code blocks.
